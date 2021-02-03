@@ -176,4 +176,20 @@ class PostController extends AppBaseController
 
         return redirect(route('posts.index'));
     }
+
+    /**
+     * Display a listing of the Post to the fedd.
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function feedPosts(Request $request)
+    {
+        $posts = $this->postRepository->all();
+
+        return view('welcome')
+            ->with('posts', $posts);
+
+    }
 }
