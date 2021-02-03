@@ -410,16 +410,7 @@
     @endif
 
 
-    @foreach($posts as $post)
-            <tr>
-                <td>{{ $post->name }}</td>
-            <td>{{ $post->description }}</td>
-            <td>{{ $post->link }}</td>
-            <td>{{ $post->asset }}</td>
-            <td>{{ $post->lyric }}</td>
-            <td>{{ $post->type_id }}</td>
-            </tr>
-        @endforeach
+
 
 
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">

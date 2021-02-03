@@ -188,7 +188,7 @@ class PostController extends AppBaseController
     {
         $posts = $this->postRepository->all();
 
-        return view('welcome')
+        return view('feed')
             ->with('posts', $posts);
 
     }
