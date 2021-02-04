@@ -87,5 +87,77 @@ class PostSeeder extends Seeder
             'created_at' => $createdDate->modify('-30 minutes')
         ]);
 
+        DB::table('posts')->insert([
+            'name' => "BEM BONDA",
+            'description' => '03 Lobbysómem',
+            'link' => 'www.criaturamusic.pt/bembonda',
+            'lyric' => "Quem tem mãe tem tudo e pai também
+            Quem não tem também tudo pode ter
+            Mas quem tem pode vadiar 'plo tempo
+            E voltar sempre a casa p’ra comer
+            E voltar sempre a casa p’ra crescer
+            
+            Ó mãe! Deixa lá cheirar o tacho
+            Ó pai! Olha que eu não sei fazer
+            Vá! Que é p’ra ver se eu me despacho
+            Que só tenho a vida inteira pr’a viver!
+            Sou novo tenho mais o que fazer...
+            
+            Quem tem mãe tem tudo e nada tem
+            E quem tem pai tem tudo e nada tem também
+            Mas quem não tem não é menos que os outros
+            Que por terem pensam ser alguém
+            Tendo ou não tendo são sempre ninguém!
+            
+            Ai mãe! Já deixei queimar o tacho
+            Ai pai! Não fiz como deve ser
+            Vá! que eu um dia logo acho
+            Que tinha a vida inteira p’ra viver!
+            E ouço o que estavas a dizer...",
+            'asset' => '',
+            'type_id' => 6,
+            'created_at' => $createdDate->modify('-31 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Eduardo",
+            'description' => 'Ferrinhos',
+            'link' => 'www.criaturamusic.pt/eduardo',
+            'lyric' => '',
+            'asset' => '/storage/uploads/foto5.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-35 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Eduardo",
+            'description' => 'Teclas',
+            'link' => 'www.criaturamusic.pt/eduardo',
+            'lyric' => '',
+            'asset' => '/storage/uploads/foto7.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-37 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Eduardo",
+            'description' => 'Teclas',
+            'link' => 'www.criaturamusic.pt/eduardo',
+            'lyric' => '',
+            'asset' => '/storage/uploads/foto1.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-39 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Eduardo",
+            'description' => 'Teclas',
+            'link' => 'www.criaturamusic.pt/eduardo',
+            'lyric' => '',
+            'asset' => '/storage/uploads/foto8.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-40 minutes')
+        ]);
+
     }
 }

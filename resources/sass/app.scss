@@ -6,3 +6,8 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+#background{
+    background-image: url('/storage/uploads/fundi.png');
+    background-repeat: repeat-y;
+}

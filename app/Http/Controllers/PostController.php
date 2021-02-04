@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Response;
 
+
+
+
 class PostController extends AppBaseController
 {
     /** @var  PostRepository */
@@ -77,8 +80,7 @@ class PostController extends AppBaseController
         );
 
         $input['asset'] = $uploadedImageResponse['image_url'];
-        // dd($input);
-        // dd($uploadedImageResponse['image_url']);
+
         $post = $this->postRepository->create($input);
 
         Flash::success('Post saved successfully.');

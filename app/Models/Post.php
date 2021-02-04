@@ -38,7 +38,8 @@ class Post extends Model
         'link',
         'asset',
         'lyric',
-        'type_id'
+        'type_id',
+        'created_at'
     ];
 
     /**
@@ -52,7 +53,8 @@ class Post extends Model
         'description' => 'string',
         'link' => 'string',
         'asset' => 'string',
-        'type_id' => 'integer'
+        'type_id' => 'integer',
+        'created_at' => 'datetime'
     ];
 
     /**
