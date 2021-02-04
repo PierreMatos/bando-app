@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ config('app.name') }}</title>
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -31,16 +33,92 @@
     <![endif]-->
 
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" id="background">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
+        {{-- <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a> --}}
+        
+        <!-- /.login-logo -->
+        <img src="/storage/uploads/titulo.png"
+        class="mx-auto d-block"
+        alt="Header Image">
     </div>
 
-    <!-- /.login-logo -->
+    <div class="container">
+        <div class="row">
+            <p class="login-box-msg text-center font-weight-bold">Entrar</p>
+
+            <form method="post" action="{{ url('/login') }}">
+                @csrf
+
+                <div class="input-group mb-3">
+                    <input type="email"
+                           name="email"
+                           value="{{ old('email') }}"
+                           placeholder="Email"
+                           class="form-control @error('email') is-invalid @enderror">
+                    <div class="input-group-append">
+                        <div class="input-group-text"><span class="fas fa-envelope"></span></div>
+                    </div>
+                    @error('email')
+                    <span class="error invalid-feedback">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="input-group mb-3">
+                    <input type="password"
+                           name="password"
+                           placeholder="Password"
+                           class="form-control @error('password') is-invalid @enderror">
+                    <div class="input-group-append">
+                        <div class="input-group-text">
+                            <span class="fas fa-lock"></span>
+                        </div>
+                    </div>
+                    @error('password')
+                    <span class="error invalid-feedback">{{ $message }}</span>
+                    @enderror
+
+                </div>
+
+                
+
+                {{-- <div class="row"> --}}
+                    {{-- <div class="col-8 mx-auto d-block" > --}}
+                        {{-- <input type="submit" class="btn text-nowrap class" id=play> --}}
+                        <button type="submit" class="btn" id=play></button>
+                        {{-- <div class="container"> --}}
+                            {{-- <img src="http://127.0.0.1:8000/storage/css/Polygon 1.png"alt="Snow">
+                            <button class="btn">Button</button> --}}
+                          {{-- </div> --}}
+                    {{-- </div>
+                </div> --}}
+
+                <div class="row">
+                    {{-- <div class="col-8"> --}}
+                        <div class="icheck-primary mr-4">
+                            <input type="checkbox" id="remember" >
+                            <label for="remember" class="bg-white">Lembrar</label>
+                        </div>
+
+                        <p class="mb-1 mr-4">
+                            <a href="{{ route('password.request') }}">Recuperar password</a>
+                        </p>
+                        <p class="mb-0">
+                            <a href="{{ route('register') }}" class="text-center">Registar</a>
+                        </p>
+
+                    {{-- </div> --}}
+                </div>
+                
+            </form>
+
+           
+        </div>
+    </div>
 
     <!-- /.login-box-body -->
-    <div class="card">
+    {{-- <div class="card">
         <div class="card-body login-card-body">
             <p class="login-box-msg">Sign in to start your session</p>
 
@@ -100,7 +178,7 @@
             </p>
         </div>
         <!-- /.login-card-body -->
-    </div>
+    </div> --}}
 
 </div>
 <!-- /.login-box -->
