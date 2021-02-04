@@ -21,7 +21,7 @@
     {
         "name": "description",
         "dbType": "string",
-        "htmlType": "text",
+        "htmlType": "longtext",
         "validations": "required",
         "searchable": true
     },

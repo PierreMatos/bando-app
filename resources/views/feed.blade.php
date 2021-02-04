@@ -1,5 +1,5 @@
 @foreach($posts as $post)
-<tr>teste teste
+<tr>
 <td>{{ $post->name }}</td>
 <td>{{ $post->description }}</td>
 <td>{{ $post->link }}</td>
