@@ -144,6 +144,10 @@ use Carbon\Carbon;
     </div>
 </div>
 
+
+<footer class="row">
+    @include('layouts.footer')
+</footer>
 @endsection
 
 <script>
