@@ -82,6 +82,16 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper" id="background">
+
+      <div class="content-wrapper" id="background">
+        <div class="menu">
+          <ul>
+            <li><a href="/">Bando</a></li>
+            <li><a href="bembonda">Bem Bonda</a></li>
+            <li><a href="pedrapao">Pedra-Pão</a></li>
+          </ul>
+        </div>
+        
       <div class="container">
           <div class="row" style="background-color:white;padding:15px;">
             <div class="header-album">
@@ -93,7 +103,7 @@
                 <label class="album">album</label>
                 <h4>BEM BONDA</h4>
                 <span>em lançamento exlusivo</span><br>
-                <a href="storage/music/Criatura - Bem Bonda.zip" target="_blank">Download aqui</a>
+                <a href="storage/music/Criatura-Bem_Bonda.zip" target="_blank">Download aqui</a>
               </div>
             </div>
 
@@ -220,5 +230,7 @@ document.addEventListener('play', function(e){
     }
 }, true);
 </script>
+
 </body>
-</html>
+@endesction
+{{-- </html> --}}

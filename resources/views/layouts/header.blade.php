@@ -90,12 +90,12 @@
         <div class="content-wrapper" id="background">
             <div class="menu">
               <ul>
-                <li><a href="index.html">Bando</a></li>
-                <li><a href="bembonda.html">Bem Bonda</a></li>
-                <li><a href="pedrapao.html">Pedra-Pão</a></li>
+                <li><a href="/">Bando</a></li>
+                <li><a href="bembonda">Bem Bonda</a></li>
+                <li><a href="pedrapao">Pedra-Pão</a></li>
               </ul>
             </div>
-            
+
         <section class="content">
             @yield('content')
         </section>

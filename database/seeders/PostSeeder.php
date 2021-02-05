@@ -97,10 +97,9 @@ class PostSeeder extends Seeder
             'description' => 'Gaita de foles, flauta transversal, ocarina e palheta beiroa',
             'link' => 'www.criaturamusic.com/ricardo',
             'lyric' => '',
-            'asset' => '/storage/uploads/ricardo.png',
+            'asset' => '/storage/uploads/ricardo.jpg',
             'type_id' => 7,
             'created_at' => $createdDate->modify('-20 minutes')
-
         ]);
 
         DB::table('posts')->insert([

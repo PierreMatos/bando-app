@@ -67,8 +67,9 @@
 }
 
 .card-body{
-  padding-top:8px;
+  padding-top:0px;
 }
+
 .card-body div {
     display: inline-block;
 }
@@ -173,7 +174,7 @@ label{
 }
 
 .card-footer {
-    width: 90%;
+    width: 100%;
     bottom: 0;
     padding-bottom: 10px;
 }
@@ -270,10 +271,11 @@ label{
   }
   
   .menu ul li a {
-      color: black;
-      margin-right: 70px;
-      font-size: large;
-      text-transform: uppercase;
+    color: black;
+    margin-right: 15px;
+    font-size: large;
+    text-transform: uppercase;
+    margin-left: 15px;
   }
 
 p.mb-1.mr-4 a {

@@ -48,7 +48,7 @@ use Carbon\Carbon;
 
                         <div class="card-footer">
                           <div class="left">
-                            <a href="{{ $post->link }}">Download aqui</a>
+                            <a href="{{ $post->link }}">Ver mais</a>
                           </div>
                           <div class="right">
                             <small class="text-muted">  {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small>
@@ -68,12 +68,12 @@ use Carbon\Carbon;
                         <img class="card-img-top" src="storage/uploads/perfil3.png" alt="BEM BONDA">
                         <div class="card-body">
                             <div class="w100">
-                              <h5 class="card-title">03 Lobbysómem</h5>
+                              <h5 class="card-title">{{$post->name}}</h5>
                               <h6 class="card-title">BEM BONDA - Criatura</h6>
                             </div>
                             <div class="w100">
                               <audio controls>
-                                <source src="storage/music/03_lobbysomem.wav" type="audio/wav">
+                                <source src="{{$post->link}}" type="audio/wav">
                                 Your browser does not support the audio element.
                                 </audio>
                             </div>
