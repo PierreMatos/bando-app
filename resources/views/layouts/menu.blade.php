@@ -47,3 +47,11 @@
 </li>
 
 
+<li class="nav-item">
+    <a href="{{ route('tracks.index') }}"
+       class="nav-link {{ Request::is('tracks*') ? 'active' : '' }}">
+        <p>Tracks</p>
+    </a>
+</li>
+
+

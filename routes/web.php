@@ -29,6 +29,7 @@ Auth::routes();
 Route::middleware(['auth'])->group(function()
     {
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
+        Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
     });
 
 Route::get('/home', [
@@ -72,3 +73,5 @@ Route::resource('postTypes', App\Http\Controllers\PostTypeController::class);
 Route::resource('posts', App\Http\Controllers\PostController::class);
 
 Route::resource('postTypes', App\Http\Controllers\PostTypeController::class);
+
+Route::resource('tracks', App\Http\Controllers\TrackController::class);

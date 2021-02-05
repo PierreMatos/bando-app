@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreatePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Repositories\PostRepository;
+use App\Repositories\TrackRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
@@ -21,10 +22,12 @@ class PostController extends AppBaseController
 {
     /** @var  PostRepository */
     private $postRepository;
+    private $trackRepository;
 
-    public function __construct(PostRepository $postRepo)
+    public function __construct(PostRepository $postRepo, TrackRepository $trackRepo)
     {
         $this->postRepository = $postRepo;
+        $this->trackRepository = $trackRepo;
     }
 
     /**
@@ -202,6 +205,18 @@ class PostController extends AppBaseController
 
         return view('feed')
             ->with('posts', $posts);
+    }
 
+
+    public function album (Request $request)
+    {
+        $posts = $this->postRepository->all();
+        $album = $posts->where('id',1); // bem bonda
+        $tracks = $this->trackRepository->all();
+        // $album = $posts->where('id',1); // bem bonda
+        //  = $this->postRepository->where('id',1);
+        return view('album')
+            ->with('album', $album[0])
+            ->with('tracks', $tracks);
     }
 }

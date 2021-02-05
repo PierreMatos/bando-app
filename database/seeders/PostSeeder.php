@@ -19,6 +19,7 @@ class PostSeeder extends Seeder
         $createdDate = Carbon::now();
 
         DB::table('posts')->insert([
+            'id' => 1,
             'name' => "BEM BONDA",
             'description' => '“Bem Bonda“, o disco da Criatura, é um resgate da ancestralidade linguística beiroa, uma expressão mutável, dependente das gentes e dos lugares, que dentro do mundo dos significados nos lembra não só que “já chega”, como também que, “como se não bastasse”, “um mal nunca vem só”.',
             'link' => 'www.criaturamusic.com/bembonda',

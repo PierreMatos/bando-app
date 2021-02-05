@@ -11,7 +11,7 @@ use Carbon\Carbon;
 
             @foreach($posts as $post)
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
-                    <div class="card mr-0">
+                    <div class="card ml-0 mr-0">
 
                         <img class="card-img-top" src="{{ $post->asset }}" alt="{{ $post->name }}">
 

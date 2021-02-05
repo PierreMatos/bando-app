@@ -29,3 +29,5 @@ Route::resource('post_types', App\Http\Controllers\API\PostTypeAPIController::cl
 
 Route::resource('posts', App\Http\Controllers\API\PostAPIController::class);
 Route::get('posts', 'PostAPIController@index')->name('posts_api');
+
+Route::resource('tracks', App\Http\Controllers\API\TrackAPIController::class);

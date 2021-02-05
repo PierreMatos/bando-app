@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             'email' => 'admin@criatura.com',
             'password' => Hash::make('bandalheira'),
         ]);
+        
         DB::table('users')->insert([
             'name' => "user1",
             'email' => 'lisetevalente@gmail.com',
