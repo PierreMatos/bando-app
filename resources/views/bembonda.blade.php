@@ -91,7 +91,7 @@
             <li><a href="pedrapao">Pedra-Pão</a></li>
           </ul>
         </div>
-        
+
       <div class="container">
           <div class="row" style="background-color:white;padding:15px;">
             <div class="header-album">
@@ -234,3 +234,13 @@ document.addEventListener('play', function(e){
 </body>
 @endesction
 {{-- </html> --}}
+<script>
+document.addEventListener('play', function(e){
+    var audios = document.getElementsByTagName('audio');
+    for(var i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != e.target){
+            audios[i].pause();
+        }
+    }
+}, true);
+</script>

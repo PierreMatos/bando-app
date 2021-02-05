@@ -68,7 +68,7 @@ use Carbon\Carbon;
                         <img class="card-img-top" src="storage/uploads/perfil3.png" alt="BEM BONDA">
                         <div class="card-body">
                             <div class="w100">
-                              <h5 class="card-title">{{$post->name}}</h5>
+                              <h5 class="card-title">{{$post->description}}</h5>
                               <h6 class="card-title">BEM BONDA - Criatura</h6>
                             </div>
                             <div class="w100">
@@ -145,3 +145,14 @@ use Carbon\Carbon;
 </div>
 
 @endsection
+
+<script>
+    document.addEventListener('play', function(e){
+        var audios = document.getElementsByTagName('audio');
+        for(var i = 0, len = audios.length; i < len;i++){
+            if(audios[i] != e.target){
+                audios[i].pause();
+            }
+        }
+    }, true);
+    </script>
