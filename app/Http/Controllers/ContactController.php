@@ -9,7 +9,7 @@ use Mail;
 class ContactController extends AppBaseController
 {
         public function contact(){
-            return view('pedrapao');
+            return view('pedra-pao');
         }
 
         public function contactPost(Request $request){

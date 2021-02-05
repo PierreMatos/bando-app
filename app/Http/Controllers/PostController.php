@@ -215,7 +215,7 @@ class PostController extends AppBaseController
         $tracks = $this->trackRepository->all();
         // $album = $posts->where('id',1); // bem bonda
         //  = $this->postRepository->where('id',1);
-        return view('album')
+        return view('bembonda')
             ->with('album', $album[0])
             ->with('tracks', $tracks);
     }

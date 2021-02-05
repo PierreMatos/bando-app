@@ -221,3 +221,64 @@ label{
 .info-album h4{
   margin-top:25px;
 }
+
+.header-pao{
+    width: 100%;
+  }
+  
+  .header-pao div img {
+      width: 100%;
+  }
+  
+  .footer-pao{
+    width:100%;
+  }
+  .footer-pao img{
+    width:100%;
+  }
+  .form-pao-pedra form {
+      text-align: center;
+      display: inline-grid;
+      margin-bottom: 50px;
+  }
+  
+  .form-pao-pedra form input {
+      margin-bottom: 25px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-align: center;
+      width: 300px;
+      border: 2px solid grey;
+  }
+  
+  .form-pao-pedra form button {
+      background: none;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      text-align: end;
+      text-decoration: underline;
+      font-weight: 700;
+  }
+  
+  .menu{text-align: center;}
+  
+  .menu ul li {
+      text-decoration: none;
+      list-style: none;
+      display: inline-flex;
+  }
+  
+  .menu ul li a {
+      color: black;
+      margin-right: 70px;
+      font-size: large;
+      text-transform: uppercase;
+  }
+
+p.mb-1.mr-4 a {
+    color: black;
+}
+p.mb-0 a {
+    color: black;
+}

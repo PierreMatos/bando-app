@@ -5,7 +5,7 @@ use Carbon\Carbon;
 @extends('layouts.header')
 @section('content')
 
-<div class="container-fluid">
+<div class="container">
     <div class="row justify-content-center">
         <div class="card-deck">
 
@@ -23,7 +23,7 @@ use Carbon\Carbon;
                   </p>
                 </div>
             </div>
-            
+
             @foreach($posts as $post)
                 
 
@@ -32,7 +32,7 @@ use Carbon\Carbon;
             
                 @if($post->type_id == 1)
 
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="card mr-0">
                         <img class="card-img-top" src="{{ $post->asset }}" alt="BEM BONDA">
                         <div class="card-body">
@@ -63,7 +63,7 @@ use Carbon\Carbon;
 
                 @if($post->type_id == 2)
 
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="card mr-0">
                         <img class="card-img-top" src="storage/uploads/perfil3.png" alt="BEM BONDA">
                         <div class="card-body">
@@ -95,7 +95,7 @@ use Carbon\Carbon;
 
                 @if($post->type_id == 7)
 
-                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="card mr-0">
                         <img class="card-img-top" src="{{ $post->asset }}" alt="{{ $post->name }}">
                         <div class="card-body">

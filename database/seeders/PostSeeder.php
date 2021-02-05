@@ -22,7 +22,7 @@ class PostSeeder extends Seeder
             'id' => 1,
             'name' => "BEM BONDA",
             'description' => '“Bem Bonda“, o disco da Criatura, é um resgate da ancestralidade linguística beiroa, uma expressão mutável, dependente das gentes e dos lugares, que dentro do mundo dos significados nos lembra não só que “já chega”, como também que, “como se não bastasse”, “um mal nunca vem só”.',
-            'link' => 'www.criaturamusic.com/bembonda',
+            'link' => 'http://criaturamusic.com/storage/music/Criatura-Bem_Bonda.zip',
             'lyric' => '',
             'asset' => '/storage/uploads/perfil3.png',
             'type_id' => 1,
@@ -71,11 +71,20 @@ class PostSeeder extends Seeder
             'type_id' => 2,
             'created_at' => $createdDate->modify('-31 minutes')
         ]);
+        DB::table('posts')->insert([
+            'name' => "BEM BONDA",
+            'description' => '02 Bem Bonda',
+            'link' => '/storage/music/02_bembonda.wav',
+            'lyric' => "",
+            'asset' => '',
+            'type_id' => 2,
+            'created_at' => $createdDate->modify('-36 minutes')
+        ]);
 
         DB::table('posts')->insert([
             'name' => "Edgar",
             'description' => 'Voz, piano, teclados e adufe',
-            'link' => 'www.criaturamusic.com/ricardo',
+            'link' => 'www.criaturamusic.com/edgar',
             'lyric' => '',
             'asset' => '/storage/uploads/edgar.jpg',
             'type_id' => 7,
@@ -88,10 +97,30 @@ class PostSeeder extends Seeder
             'description' => 'Gaita de foles, flauta transversal, ocarina e palheta beiroa',
             'link' => 'www.criaturamusic.com/ricardo',
             'lyric' => '',
-            'asset' => '/storage/uploads/ricardo.jpg',
+            'asset' => '/storage/uploads/ricardo.png',
             'type_id' => 7,
             'created_at' => $createdDate->modify('-20 minutes')
 
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Fábio Cantinho",
+            'description' => 'bateria ',
+            'link' => 'www.criaturamusic.com/fabio',
+            'lyric' => '',
+            'asset' => '/storage/uploads/cantinho.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-20 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Iúri Oliveira",
+            'description' => 'percussões e Mbira',
+            'link' => 'www.criaturamusic.com/iuri',
+            'lyric' => '',
+            'asset' => '/storage/uploads/iuri.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-20 minutes')
         ]);
 
         DB::table('posts')->insert([
@@ -120,6 +149,36 @@ class PostSeeder extends Seeder
             'link' => 'www.criaturamusic.com/acacio',
             'lyric' => '',
             'asset' => '/storage/uploads/dionisio.jpg',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-20 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Palinhe",
+            'description' => 'baixo eléctrico',
+            'link' => 'www.criaturamusic.com/palinhe',
+            'lyric' => '',
+            'asset' => '/storage/uploads/palinhe.jpg',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-20 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "João Aguiar",
+            'description' => 'guitarra eléctrica',
+            'link' => 'www.criaturamusic.com/aguiar',
+            'lyric' => '',
+            'asset' => '/storage/uploads/aguiar.png',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-20 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "Alexandre Bernardo",
+            'description' => 'bandolim, guitarra acústica, cavaquinho',
+            'link' => 'www.criaturamusic.com/alex',
+            'lyric' => '',
+            'asset' => '/storage/uploads/alex.jpg',
             'type_id' => 7,
             'created_at' => $createdDate->modify('-20 minutes')
         ]);
