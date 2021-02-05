@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ config('app.name') }} | Registration Page</title>
 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
+
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
@@ -30,15 +32,19 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" id="background">
 <div class="register-box">
     <div class="register-logo">
-        <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a>
+        {{-- <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a> --}}
+        <img src="/storage/uploads/titulo.png"
+        class="mx-auto d-block"
+        alt="Header Image">
     </div>
 
-    <div class="card">
-        <div class="card-body register-card-body">
-            <p class="login-box-msg">Register a new membership</p>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+        {{-- <div class="card-body"> --}}
+            <p class="col-12 login-box-msg text-center font-weight-bold">Registar</p>
 
             <form method="post" action="{{ route('register') }}">
                 @csrf
@@ -48,7 +54,7 @@
                            name="name"
                            class="form-control @error('name') is-invalid @enderror"
                            value="{{ old('name') }}"
-                           placeholder="Full name">
+                           placeholder="Username">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-user"></span></div>
                     </div>
@@ -88,30 +94,40 @@
                     <input type="password"
                            name="password_confirmation"
                            class="form-control"
-                           placeholder="Retype password">
+                           placeholder="Repetir password">
                     <div class="input-group-append">
                         <div class="input-group-text"><span class="fas fa-lock"></span></div>
                     </div>
                 </div>
 
                 <div class="row">
-                    <div class="col-8">
+                    <div class="col-12">
                         <div class="icheck-primary">
                             <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                             <label for="agreeTerms">
-                                I agree to the <a href="#">terms</a>
+                                Li e aceito os <a href="#">termos</a>
                             </label>
                         </div>
                     </div>
                     <!-- /.col -->
-                    <div class="col-4">
-                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    <div class="col-12">
+                        {{-- <button type="submit" class="btn btn-primary btn-block">Register</button> --}}
+
                     </div>
                     <!-- /.col -->
                 </div>
+                
+                <button type="submit" class="btn mt-2 mb-5" id=play></button>
+
+                <div class="row">
+                    <p class="mb-0 mt-5 ml-5">
+                    <a href="{{ route('login') }}" class="text-center">Já tenho conta</a>
+                    </p>
+                </div>
+
             </form>
 
-            <a href="{{ route('login') }}" class="text-center">I already have a membership</a>
+           
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->

@@ -86,7 +86,7 @@
                 {{-- <div class="row"> --}}
                     {{-- <div class="col-8 mx-auto d-block" > --}}
                         {{-- <input type="submit" class="btn text-nowrap class" id=play> --}}
-                        <button type="submit" class="btn" id=play></button>
+                        <button type="submit" class="btn mt-2 mb-5" id=play></button>
                         {{-- <div class="container"> --}}
                             {{-- <img src="http://127.0.0.1:8000/storage/css/Polygon 1.png"alt="Snow">
                             <button class="btn">Button</button> --}}
@@ -94,11 +94,11 @@
                     {{-- </div>
                 </div> --}}
 
-                <div class="row">
+                <div class="row mt-4">
                     {{-- <div class="col-8"> --}}
                         <div class="icheck-primary mr-4">
                             <input type="checkbox" id="remember" >
-                            <label for="remember" class="bg-white">Lembrar</label>
+                            <label for="remember">Lembrar</label>
                         </div>
 
                         <p class="mb-1 mr-4">

@@ -9,6 +9,7 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator as FacadesValidator;
 use Response;
@@ -35,10 +36,19 @@ class PostController extends AppBaseController
      */
     public function index(Request $request)
     {
+        $user = Auth::user();
+
         $posts = $this->postRepository->all();
+
+        if ($user->mail == 'admin@criatura.com') {
 
         return view('posts.index')
             ->with('posts', $posts);
+        }else
+
+        return view('feed')
+            ->with('posts', $posts);
+
     }
 
     /**
