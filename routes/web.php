@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,16 @@ Route::middleware(['auth'])->group(function()
     {
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
+
+        
+        Route::get('/sendemail', 'SendEmailController@index');
+        Route::post('/sendemail/send', 'SendEmailController@send');
+
+        Route::get('/pedrapao', [ ContactController::class, 'contact'])->name('pedrapao');
+        Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
+        // Route::get('/pedrapao', 'ContactController@contact')->name('contact');
+        // Route::post('/contact', 'ContactController@contactPost')->name('contactPost');
+
     });
 
 Route::get('/home', [

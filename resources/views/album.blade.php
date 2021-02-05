@@ -18,15 +18,15 @@ use Carbon\Carbon;
 
     @foreach ($tracks as $track)
         <div class="row">
-            <div class="col-9 track-bg m-4 font-weight-bold">
-                <div class="float-left"> 
-                    <span> {{$track->order}} " - " </span>
+            <div class="col-12 track-bg p-4 font-weight-bold">
+                <div class="float-left ml-2"> 
+                    <span> {{$track->order}}  -  </span>
                     <span> {{$track->name}} </span>
                 </div>
                 <div class="float-right">
                 <span> {{$track->duration}} </span>
+                <label class="ml-5"> Letra </label>
                 </div>
-                <label> Letra </label>
             </div>
         </div>
     @endforeach
