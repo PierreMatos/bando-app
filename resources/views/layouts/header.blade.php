@@ -51,26 +51,26 @@
 
         <ul class="navbar-nav">
             <li class="nav-item dropdown user-menu">
-                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                {{-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                     <span class="d-none d-md-inline">
                         {{ Auth::user()->name }}
                     </span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                </a> --}}
+                {{-- <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                     <!-- User image -->
                     <li class="user-header bg-primary">
                         <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
                              class="img-circle elevation-2"
                              alt="User Image">
                         <p>
-                            {{ Auth::user()->name }}
+                            {{ Auth::user()->name }} --}}
                             
                             {{-- <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small> --}}
-                        </p>
-                    </li>
+                        {{-- </p>
+                    </li> --}}
                     <!-- Menu Footer-->
-                    <li class="user-footer">
-                        <a href="#" class="btn btn-default btn-flat">Profile</a>
+                    {{-- <li class="user-footer"> --}}
+                        {{-- <a href="#" class="btn btn-default btn-flat">Profile</a> --}}
                         <a href="#" class="btn btn-default btn-flat float-right"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                             Sign out
@@ -78,10 +78,10 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+                    {{-- </li> --}}
+                {{-- </ul>
+            </li> --}}
+        {{-- </ul> --}}
     </nav>
 
     <!-- Content Wrapper. Contains page content -->

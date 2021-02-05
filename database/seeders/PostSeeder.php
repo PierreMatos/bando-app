@@ -30,68 +30,20 @@ class PostSeeder extends Seeder
         ]);
 
         DB::table('posts')->insert([
-            'name' => "Ricardo",
-            'description' => 'Gaita de foles',
-            'link' => 'www.criaturamusic.com/ricardo',
+            'id' => 2,
+            'name' => "PEDRA-PÃO",
+            'description' => '“A Pedra-Pão é uma Criatura comestível que podes comer ou guardar. A obra foi trabalhada pelo artista plástico Diogo Vaz Cavaleiro, que com o apoio da Fundação GDA …”.',
+            'link' => 'www.criaturamusic.com/pedrapao',
             'lyric' => '',
-            'asset' => '/storage/uploads/foto9.png',
-            'type_id' => 7,
-            'created_at' => $createdDate->modify('-20 minutes')
-
-        ]);
-
-        DB::table('posts')->insert([
-            'name' => "BEM BONDA",
-            'description' => 'Mobile & Desktop',
-            'link' => 'www.criaturamusic.com/aw1',
-            'lyric' => '',
-            'asset' => '/storage/uploads/capa5.png',
-            'type_id' => 3,
-            'created_at' => $createdDate->modify('-30 minutes')
-
-        ]);
-
-        DB::table('posts')->insert([
-            'name' => "BEM BONDA",
-            'description' => 'Mobile & Desktop',
-            'link' => 'www.criaturamusic.com/aw2',
-            'lyric' => '',
-            'asset' => '/storage/uploads/TITULO_PNG.png',
-            'type_id' => 3
-        ]);
-
-        DB::table('posts')->insert([
-            'name' => "Eduardo",
-            'description' => 'Voz e guitarra',
-            'link' => 'www.criaturamusic.com/eduardo',
-            'lyric' => '',
-            'asset' => '/storage/uploads/foto4.png',
-            'type_id' => 7
-        ]);
-
-        DB::table('posts')->insert([
-            'name' => "in Publico",
-            'description' => '"A Criatura transformou pedras em pães e fez um disco para 2021"',
-            'link' => 'www.publico.pt/noticia',
-            'lyric' => '',
-            'asset' => '',
-            'type_id' => 5
-        ]);
-
-        DB::table('posts')->insert([
-            'name' => "Eduardo",
-            'description' => 'Baixo',
-            'link' => 'www.criaturamusic.pt/eduardo',
-            'lyric' => '',
-            'asset' => '/storage/uploads/foto4.png',
-            'type_id' => 7,
-            'created_at' => $createdDate->modify('-30 minutes')
+            'asset' => '/storage/uploads/pao.jpg',
+            'type_id' => 1,
+            'created_at' => $createdDate->modify('-15 minutes')
         ]);
 
         DB::table('posts')->insert([
             'name' => "BEM BONDA",
             'description' => '03 Lobbysómem',
-            'link' => 'www.criaturamusic.pt/bembonda',
+            'link' => '/storage/music/03_lobbysomem.wav',
             'lyric' => "Quem tem mãe tem tudo e pai também
             Quem não tem também tudo pode ter
             Mas quem tem pode vadiar 'plo tempo
@@ -116,49 +68,90 @@ class PostSeeder extends Seeder
             Que tinha a vida inteira p’ra viver!
             E ouço o que estavas a dizer...",
             'asset' => '',
-            'type_id' => 6,
+            'type_id' => 2,
             'created_at' => $createdDate->modify('-31 minutes')
         ]);
 
         DB::table('posts')->insert([
-            'name' => "Eduardo",
-            'description' => 'Ferrinhos',
-            'link' => 'www.criaturamusic.pt/eduardo',
+            'name' => "Edgar",
+            'description' => 'Voz, piano, teclados e adufe',
+            'link' => 'www.criaturamusic.com/ricardo',
             'lyric' => '',
-            'asset' => '/storage/uploads/foto5.png',
+            'asset' => '/storage/uploads/edgar.jpg',
             'type_id' => 7,
-            'created_at' => $createdDate->modify('-35 minutes')
+            'created_at' => $createdDate->modify('-20 minutes')
+
         ]);
 
         DB::table('posts')->insert([
-            'name' => "Eduardo",
-            'description' => 'Teclas',
-            'link' => 'www.criaturamusic.pt/eduardo',
+            'name' => "Ricardo",
+            'description' => 'Gaita de foles, flauta transversal, ocarina e palheta beiroa',
+            'link' => 'www.criaturamusic.com/ricardo',
             'lyric' => '',
-            'asset' => '/storage/uploads/foto7.png',
+            'asset' => '/storage/uploads/ricardo.jpg',
             'type_id' => 7,
-            'created_at' => $createdDate->modify('-37 minutes')
+            'created_at' => $createdDate->modify('-20 minutes')
+
         ]);
 
         DB::table('posts')->insert([
-            'name' => "Eduardo",
-            'description' => 'Teclas',
-            'link' => 'www.criaturamusic.pt/eduardo',
+            'name' => "Cláudio Gomes",
+            'description' => 'trompete',
+            'link' => 'www.criaturamusic.com/ricardo',
             'lyric' => '',
-            'asset' => '/storage/uploads/foto1.png',
+            'asset' => '/storage/uploads/claudio.jpg',
             'type_id' => 7,
-            'created_at' => $createdDate->modify('-39 minutes')
+            'created_at' => $createdDate->modify('-20 minutes')
         ]);
 
         DB::table('posts')->insert([
-            'name' => "Eduardo",
-            'description' => 'Teclas',
-            'link' => 'www.criaturamusic.pt/eduardo',
+            'name' => "Acácio Barbosa",
+            'description' => 'guitarra portuguesa',
+            'link' => 'www.criaturamusic.com/acacio',
             'lyric' => '',
-            'asset' => '/storage/uploads/foto8.png',
+            'asset' => '/storage/uploads/acacio.png',
             'type_id' => 7,
-            'created_at' => $createdDate->modify('-40 minutes')
+            'created_at' => $createdDate->modify('-20 minutes')
         ]);
+
+        DB::table('posts')->insert([
+            'name' => "Gil Dionísio",
+            'description' => 'voz e violino',
+            'link' => 'www.criaturamusic.com/acacio',
+            'lyric' => '',
+            'asset' => '/storage/uploads/dionisio.jpg',
+            'type_id' => 7,
+            'created_at' => $createdDate->modify('-20 minutes')
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "BEM BONDA",
+            'description' => 'Mobile & Desktop',
+            'link' => 'www.criaturamusic.com/aw1',
+            'lyric' => '',
+            'asset' => '/storage/uploads/capa5.png',
+            'type_id' => 3,
+            'created_at' => $createdDate->modify('-30 minutes')
+
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "BEM BONDA",
+            'description' => 'Mobile & Desktop',
+            'link' => 'www.criaturamusic.com/aw2',
+            'lyric' => '',
+            'asset' => '/storage/uploads/TITULO_PNG.png',
+            'type_id' => 3
+        ]);
+
+        DB::table('posts')->insert([
+            'name' => "in Publico",
+            'description' => '"A Criatura transformou pedras em pães e fez um disco para 2021"',
+            'link' => 'www.publico.pt/noticia',
+            'lyric' => '',
+            'asset' => '',
+            'type_id' => 5
+        ]);      
 
     }
 }
