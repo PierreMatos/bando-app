@@ -79,13 +79,13 @@
                             @csrf
                         </form>
                     {{-- </li> --}}
-                {{-- </ul>
-            </li> --}}
-        {{-- </ul> --}}
+                {{-- </ul>--}}
+            </li> 
+        </ul>
     </nav>
 
     <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
+    {{-- <div class="content-wrapper"> --}}
 
         <div class="content-wrapper" id="background">
             <div class="menu">
@@ -96,11 +96,12 @@
               </ul>
             </div>
 
-        <section class="content">
-            @yield('content')
-        </section>
-    </div>
+            <section class="content">
+                @yield('content')
+            </section>
+        </div>
 
+    {{-- </div> --}}
 </div>
 </body>
 </html>

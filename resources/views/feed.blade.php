@@ -25,10 +25,6 @@ use Carbon\Carbon;
             </div>
 
             @foreach($posts as $post)
-                
-
-           
-
             
                 @if($post->type_id == 1)
 
@@ -46,20 +42,18 @@ use Carbon\Carbon;
                             <p class="card-text">{{ $post->description }}</p>
                         </div>
 
-                        <div class="card-footer">
-                          <div class="left">
-                            <a href="{{ $post->link }}">Ver mais</a>
-                          </div>
-                          <div class="right">
-                            <small class="text-muted">  {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small>
-                          </div>
+                      <div class="card-footer">
+                        <div class="left">
+                          <a href="{{ $post->link }}">Ver mais</a>
                         </div>
+                        <div class="right">
+                          <small class="text-muted">  {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small>
+                        </div>
+                      </div>
                     </div>
                 </div>
 
                 @endif
-
-
 
                 @if($post->type_id == 2)
 
@@ -142,12 +136,13 @@ use Carbon\Carbon;
             @endforeach
         </div>
     </div>
+    <footer class="row">
+      @include('layouts.footer')
+  </footer>
 </div>
 
 
-<footer class="row">
-    @include('layouts.footer')
-</footer>
+
 @endsection
 
 <script>

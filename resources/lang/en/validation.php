@@ -131,6 +131,9 @@ return [
     */
 
     'custom' => [
+        'email' => [
+            'in_array:emails' => 'Este e-mail nao possui acesso de entrada',
+        ],
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],

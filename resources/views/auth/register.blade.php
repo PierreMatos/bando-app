@@ -101,7 +101,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-8">
                         <div class="icheck-primary">
                             <input type="checkbox" id="agreeTerms" name="terms" value="agree">
                             <label for="agreeTerms">
@@ -109,25 +109,16 @@
                             </label>
                         </div>
                     </div>
-                    <!-- /.col -->
-                    <div class="col-12">
-                        {{-- <button type="submit" class="btn btn-primary btn-block">Register</button> --}}
-
+                    <div class="col-4">
+                    <a href="{{ route('login') }}" class="text-center">Já tenho conta</a>
                     </div>
+
                     <!-- /.col -->
                 </div>
                 
-                <button type="submit" class="btn mt-2 mb-5" id=play></button>
-
-                <div class="row">
-                    <p class="mb-0 mt-5 ml-5">
-                    <a href="{{ route('login') }}" class="text-center">Já tenho conta</a>
-                    </p>
-                </div>
-
+                <button type="submit" class="btn mt-4 mb-5" id=play></button>
             </form>
 
-           
         </div>
         <!-- /.form-box -->
     </div><!-- /.card -->
