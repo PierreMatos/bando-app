@@ -94,6 +94,11 @@
       </div>
 
       <div class="container">
+        @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div>
+        @endif
           <div class="row" style="background-color:white;padding:15px;">
             <div class="header-pao">
               <div>
@@ -122,10 +127,11 @@
 
         <div class="form-pao-pedra">
           <h4>Morada</h4>
-          <form action="/#">
-              <input placeholder="Rua" type="text" name="rua" required />
-              <input placeholder="Localidade" type="text" name="loacalidade" required />
-              <input  placeholder="Codigo-Postal" type="text" name ="codigo postal" required />
+          <form method="POST" action="/pedrapao">
+            @csrf
+              <input placeholder="Rua" type="text" name="rua" id="rua" class="form-control" placeholder="Introduza a rua" required />
+              <input placeholder="Localidade" type="text" name="localidade" id="localidade" required />
+              <input  placeholder="Codigo-Postal" type="text" name ="cod_postal" id="cod_postal" required />
               <button type="submit">Encomenda a tua PEDRA-PÃO ></button>
           </form>
         </div>

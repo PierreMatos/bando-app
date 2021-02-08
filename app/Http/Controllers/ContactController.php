@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\AppBaseController;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Mail;
 
 class ContactController extends AppBaseController
@@ -13,24 +14,29 @@ class ContactController extends AppBaseController
         }
 
         public function contactPost(Request $request){
-            $this->validate($request, [
-                            'name' => 'required',
-                            'email' => 'required|email',
-                            'comment' => 'required'
-                    ]);
+
+
+        //     $this->validate($request, [
+        //                     'rua' => 'required',
+        //                     'local' => 'required',
+        //                     'cod_postal' => 'required'
+        //             ]);
+
 
             Mail::send('email', [
-                    'name' => $request->get('name'),
-                    'email' => $request->get('email'),
-                    'comment' => $request->get('comment') ],
+                    'email' => Auth::user()->email,
+                    'nome' => $request->get('nome'),
+                    'rua' => $request->get('rua'),
+                    'localidade' => $request->get('localidade'),
+                    'cod_postal' => $request->get('cod_postal') ],
                     function ($message) {
-                            $message->from($request->get('email'));
-                            $message->cc('info@remotepartner.co');
-                            $message->to('bembonda@criaturamusic.com', 'Your Name')
-                            ->subject('Your Website Contact Form');
+                            $message->from(Auth::user()->email);
+                        //     $message->cc('info@remotepartner.co');
+                            $message->to('pierrematos@remotepartner.co', 'Criatura')
+                            ->subject('Encomenda Pedra Pão');
             });
 
-            return back()->with('success', 'Thanks for contacting me, I will get back to you soon!');
+            return back()->with('success', 'Obrigado pela tua encomenda, entraremos em contaco brevemente.');
 
         }
 }

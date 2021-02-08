@@ -1,3 +1,4 @@
-Inquiry from: {{ $name }}
-<p> Email: {{ $email }} </p>
-<p> Message: {{ $comment }} </p>
+<p>email: {{ $email }}</p>
+<p>rua: {{ $rua }}</p>
+<p> localidade: {{ $localidade }} </p>
+<p> codigo postal: {{ $cod_postal }} </p>
