@@ -31,12 +31,12 @@ class ContactController extends AppBaseController
                     'cod_postal' => $request->get('cod_postal') ],
                     function ($message) {
                             $message->from(Auth::user()->email);
-                        //     $message->cc('info@remotepartner.co');
-                            $message->to('pierrematos@remotepartner.co', 'Criatura')
+                            $message->cc('info@remotepartner.co');
+                            $message->to('bembonda@criaturamusic.com', 'Criatura')
                             ->subject('Encomenda Pedra Pão');
             });
 
-            return back()->with('success', 'Obrigado pela tua encomenda, entraremos em contaco brevemente.');
+            return back()->with('success', 'Obrigado pela tua encomenda, entraremos em contacto brevemente.');
 
         }
 }
