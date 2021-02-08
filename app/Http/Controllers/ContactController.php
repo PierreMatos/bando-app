@@ -24,8 +24,9 @@ class ContactController extends AppBaseController
                     'email' => $request->get('email'),
                     'comment' => $request->get('comment') ],
                     function ($message) {
-                            $message->from('pierrematos@remotepartner.co');
-                            $message->to('pierrematos@remotepartner.co', 'Your Name')
+                            $message->from($request->get('email'));
+                            $message->cc('info@remotepartner.co');
+                            $message->to('bembonda@criaturamusic.com', 'Your Name')
                             ->subject('Your Website Contact Form');
             });
 

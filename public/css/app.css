@@ -11007,6 +11007,7 @@ a.text-dark:focus {
 .card-body {
   padding: 0px;
   padding-top: 10px;
+  margin-top: 10px;
 }
 
 .card-body div {
@@ -11115,7 +11116,7 @@ h5 {
 }
 
 .w100 audio {
-  width: 250px;
+  width: 100%;
 }
 
 label {
@@ -11134,7 +11135,7 @@ label {
   }
 
   .w100 audio {
-    width: 400px;
+    width: 100%;
     margin-bottom: 25px;
   }
 }

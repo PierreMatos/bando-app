@@ -40,8 +40,13 @@ Route::middleware(['auth'])->group(function()
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
         // Route::get('/pedrapao', 'ContactController@contact')->name('contact');
         // Route::post('/contact', 'ContactController@contactPost')->name('contactPost');
-
+        Route::get('/storage/*');
     });
+
+
+    Route::get('/storage', [
+        'middleware' => 'auth',
+   ]);
 
 Route::get('/home', [
     HomeController::class, 'index'
