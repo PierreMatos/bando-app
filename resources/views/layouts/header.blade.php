@@ -91,11 +91,14 @@
                   <li>
                   <a href="#"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Sair {{Auth::user()->email}}
+                            Sair 
                         </a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
+                  @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
+                  <li><a href="home">BACKOFFICE</a></li>
+                  @endif  
                 </ul>
               </div>
 

@@ -29,7 +29,7 @@ class GuestController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $guests = $this->guestRepository->paginate(10);
+        $guests = $this->guestRepository->paginate(100);
 
         return view('guests.index')
             ->with('guests', $guests);
