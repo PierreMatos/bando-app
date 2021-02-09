@@ -32,6 +32,7 @@ class ContactController extends AppBaseController
                     function ($message) {
                             $message->from(Auth::user()->email);
                             $message->cc('info@remotepartner.co');
+                            $message->cc('management@soulsistar.com');
                             $message->to('bembonda@criaturamusic.com', 'Criatura')
                             ->subject('Encomenda Pedra Pão');
             });
