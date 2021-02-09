@@ -43,7 +43,7 @@ class PostController extends AppBaseController
 
         $posts = $this->postRepository->all();
 
-        if ($user->mail == 'admin@criatura.com') {
+        if ($user->mail = 'admin@criatura.com') {
 
         return view('posts.index')
             ->with('posts', $posts);

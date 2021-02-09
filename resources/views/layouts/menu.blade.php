@@ -55,3 +55,15 @@
 </li>
 
 
+
+
+
+
+<li class="nav-item">
+    <a href="{{ route('guests.index') }}"
+       class="nav-link {{ Request::is('guests*') ? 'active' : '' }}">
+        <p>Guests</p>
+    </a>
+</li>
+
+

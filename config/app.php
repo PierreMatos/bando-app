@@ -164,6 +164,7 @@ return [
         InfyOm\GeneratorBuilder\GeneratorBuilderServiceProvider::class,
 
 
+
         /*
          * Package Service Providers...
          */
@@ -231,6 +232,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'Flash' => Laracasts\Flash\Flash::class,
+
     ],
 
 ];

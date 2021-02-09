@@ -49,6 +49,7 @@
                              class="mx-auto d-block"
                              alt="Header Image">
 
+                             
         <ul class="navbar-nav">
             <li class="nav-item dropdown user-menu">
                 {{-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -71,13 +72,7 @@
                     <!-- Menu Footer-->
                     {{-- <li class="user-footer"> --}}
                         {{-- <a href="#" class="btn btn-default btn-flat">Profile</a> --}}
-                        <a href="#" class="btn btn-default btn-flat float-right"
-                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Sign out
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
+                        
                     {{-- </li> --}}
                 {{-- </ul>--}}
             </li> 
@@ -88,13 +83,21 @@
     {{-- <div class="content-wrapper"> --}}
 
         <div class="content-wrapper" id="background">
-            <div class="menu">
-              <ul>
-                <li><a href="/">Bando</a></li>
-                <li><a href="bembonda">Bem Bonda</a></li>
-                <li><a href="pedrapao">Pedra-Pão</a></li>
-              </ul>
-            </div>
+            <div class="menu pt-1">
+                <ul>
+                  <li><a href="/">Bando</a></li>
+                  <li><a href="bembonda">Bem Bonda</a></li>
+                  <li><a href="pedrapao">Pedra-Pão</a></li>
+                  <li>
+                  <a href="#"
+                           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Sair {{Auth::user()->email}}
+                        </a></li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                </ul>
+              </div>
 
             <section class="content">
                 @yield('content')

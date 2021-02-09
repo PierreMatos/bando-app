@@ -9,7 +9,7 @@
 
 #background{
     background-image: url('/storage/uploads/fundi.jpg');
-    background-repeat: repeat-y;
+    background-repeat: repeat;
 }
 
 #play{
@@ -264,7 +264,11 @@ label{
       font-weight: 700;
   }
   
-  .menu{text-align: center;}
+  .menu{
+    text-align: center;
+    background-color: #ffffff61;
+    margin-bottom: 20px;
+  }
   
   .menu ul li {
       text-decoration: none;
@@ -285,4 +289,24 @@ p.mb-1.mr-4 a {
 }
 p.mb-0 a {
     color: black;
+}
+
+@media only screen and (max-width: 575px) {
+    .header-album{
+      width: 100%;
+    }
+    .menu ul li a {
+      padding: 0px 5px 0 5px;
+    }
+    .header-album div {
+      margin: 0;
+      display: block;
+    }
+    .infoalbum{
+      text-align: center;
+      padding-top:25px;
+    }
+    .header-album div img {
+      width: 100%;
+  }
 }

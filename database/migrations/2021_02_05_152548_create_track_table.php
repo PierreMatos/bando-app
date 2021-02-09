@@ -19,7 +19,7 @@ class CreateTrackTable extends Migration
             $table->integer('order');
             $table->string('name');
             $table->string('duration');
-            $table->longText('lyric');
+            $table->longText('lyric')->nullable();
             $table->string('link');
             $table->integer('album_id')->unsigned()->default(0);
             $table->timestamps();

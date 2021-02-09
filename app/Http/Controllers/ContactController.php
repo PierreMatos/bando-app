@@ -22,7 +22,7 @@ class ContactController extends AppBaseController
         //                     'cod_postal' => 'required'
         //             ]);
 
-
+        try{
             Mail::send('email', [
                     'email' => Auth::user()->email,
                     'nome' => $request->get('nome'),
@@ -35,7 +35,9 @@ class ContactController extends AppBaseController
                             $message->to('bembonda@criaturamusic.com', 'Criatura')
                             ->subject('Encomenda Pedra Pão');
             });
-
+        }catch(\Exception $e){
+                echo ("Erro, tenta novamente");
+            }
             return back()->with('success', 'Obrigado pela tua encomenda, entraremos em contacto brevemente.');
 
         }

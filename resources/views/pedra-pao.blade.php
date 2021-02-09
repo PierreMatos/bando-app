@@ -129,7 +129,8 @@
           <h4>Morada</h4>
           <form method="POST" action="/pedrapao">
             @csrf
-              <input placeholder="Rua" type="text" name="rua" id="rua" class="form-control" placeholder="Introduza a rua" required />
+              <input placeholder="Nome" type="text" name="nome" id="nome" class="form-control" required />
+              <input placeholder="Rua" type="text" name="rua" id="rua" class="form-control" required />
               <input placeholder="Localidade" type="text" name="localidade" id="localidade" required />
               <input  placeholder="Codigo-Postal" type="text" name ="cod_postal" id="cod_postal" required />
               <button type="submit">Encomenda a tua PEDRA-PÃO ></button>

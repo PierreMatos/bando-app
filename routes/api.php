@@ -31,3 +31,13 @@ Route::resource('posts', App\Http\Controllers\API\PostAPIController::class);
 Route::get('posts', 'PostAPIController@index')->name('posts_api');
 
 Route::resource('tracks', App\Http\Controllers\API\TrackAPIController::class);
+
+
+
+
+
+
+
+
+
+Route::resource('guests', App\Http\Controllers\API\GuestAPIController::class);
