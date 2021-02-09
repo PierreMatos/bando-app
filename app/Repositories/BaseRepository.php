@@ -60,6 +60,13 @@ abstract class BaseRepository
 
         return $this->model = $model;
     }
+    
+    public function orderBy($column, $direction = 'asc')
+    {
+        $this->model = $this->model->orderBy($column, $direction);
+
+        return $this;
+    }
 
     /**
      * Paginate records for scaffold.
@@ -70,6 +77,7 @@ abstract class BaseRepository
      */
     public function paginate($perPage, $columns = ['*'])
     {
+        
         $query = $this->allQuery();
 
         return $query->paginate($perPage, $columns);
@@ -190,4 +198,6 @@ abstract class BaseRepository
 
         return $model->delete();
     }
+
+    
 }

@@ -29,7 +29,8 @@ class GuestController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $guests = $this->guestRepository->paginate(100);
+        // $guests = $this->guestRepository->paginate(100);
+        $guests = $this->guestRepository->orderBy('email','asc')->paginate(100);
 
         return view('guests.index')
             ->with('guests', $guests);
