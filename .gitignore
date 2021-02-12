@@ -19,3 +19,7 @@ yarn-error.log
 fields_sample.json
 public/index.php
 public/index.php
+app/Http/Controllers/AppBaseController.php
+app/Providers/RouteServiceProvider.php
+app/Repositories/BaseRepository.php
+tests/ApiTestTrait.php

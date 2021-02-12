@@ -228,11 +228,11 @@ label{
 .header-pao{
     width: 100%;
   }
-  
+
   .header-pao div img {
       width: 100%;
   }
-  
+
   .footer-pao{
     width:100%;
   }
@@ -244,7 +244,7 @@ label{
       display: inline-grid;
       margin-bottom: 50px;
   }
-  
+
   .form-pao-pedra form input {
       margin-bottom: 25px;
       padding-top: 15px;
@@ -253,7 +253,7 @@ label{
       width: 300px;
       border: 2px solid grey;
   }
-  
+
   .form-pao-pedra form button {
       background: none;
       border: none;
@@ -263,19 +263,19 @@ label{
       text-decoration: underline;
       font-weight: 700;
   }
-  
+
   .menu{
     text-align: center;
     background-color: #ffffff61;
     margin-bottom: 20px;
   }
-  
+
   .menu ul li {
       text-decoration: none;
       list-style: none;
       display: inline-flex;
   }
-  
+
   .menu ul li a {
     color: black;
     margin-right: 15px;
@@ -291,10 +291,53 @@ p.mb-0 a {
     color: black;
 }
 
+.table-album tbody tr {
+    color: black;
+    font-size: larger;
+}
+
+button.btn-play {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+button.btn-play :active {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+button.btn-pause {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    padding-left: 5px;
+}
+button.btn-pause :active {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+}
+
+.btn-pause{
+  display: none;
+}
+
+.letra {
+    background-color: #BCD9DA;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+    border-radius: 21px;
+    font-size: small;
+}
+
+
 @media only screen and (max-width: 575px) {
-    .header-album{
-      width: 100%;
-    }
+
     .menu ul li a {
       padding: 0px 5px 0 5px;
     }
