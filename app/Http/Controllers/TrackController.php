@@ -8,6 +8,7 @@ use App\Repositories\TrackRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
+use Illuminate\Support\Facades\DB;
 use Response;
 
 class TrackController extends AppBaseController
@@ -152,5 +153,35 @@ class TrackController extends AppBaseController
         Flash::success('Track deleted successfully.');
 
         return redirect(route('tracks.index'));
+    }
+
+    /**
+     * Show Song with related.
+     *
+     * @param int $id
+     *
+     * @throws \Exception
+     *
+     * @return Response
+     */
+    public function showTrackWithRelated($id)
+    {
+        $track = $this->trackRepository->find($id);
+
+        $album = DB::table('albums')->where('id', $track->album_id)->get()->first();
+        
+        $tracks = DB::table('track')->where('album_id', 1)->get();
+
+        if (empty($track)) {
+            Flash::error('Track not found');
+
+            return redirect(route('tracks.index'));
+        }
+
+        return view('letra')
+                    ->with('track', $track)
+                    ->with('album', $album)
+                    ->with('related', $tracks);
+
     }
 }

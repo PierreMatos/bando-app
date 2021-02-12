@@ -7,6 +7,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\TrackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +46,7 @@ Route::middleware(['auth'])->group(function()
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
 
         Route::get('/album/{album}', [ AlbumController::class, 'showAlbum'])->name('album');
+        Route::get('/letra/{slug}', [ TrackController::class, 'showTrackWithRelated'])->name('letra');
 
         
         Route::get('/sendemail', 'SendEmailController@index');
