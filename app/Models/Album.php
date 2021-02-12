@@ -7,27 +7,23 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
- * Class Track
+ * Class Album
  * @package App\Models
- * @version February 11, 2021, 9:14 pm UTC
+ * @version February 11, 2021, 9:20 pm UTC
  *
- * @property \App\Models\Album $album
  * @property string $name
  * @property string $description
  * @property string $link
  * @property string $asset
- * @property string $lyric
- * @property integer $order
- * @property string $duração
- * @property integer $album_id
+ * @property string $data_lancamento
  */
-class Track extends Model
+class Album extends Model
 {
     use SoftDeletes;
 
     use HasFactory;
 
-    public $table = 'track';
+    public $table = 'albums';
     
 
     protected $dates = ['deleted_at'];
@@ -39,10 +35,7 @@ class Track extends Model
         'description',
         'link',
         'asset',
-        'lyric',
-        'order',
-        'duração',
-        'album_id'
+        'data_lancamento'
     ];
 
     /**
@@ -55,10 +48,7 @@ class Track extends Model
         'name' => 'string',
         'description' => 'string',
         'link' => 'string',
-        'asset' => 'string',
-        'order' => 'integer',
-        'duração' => 'string',
-        'album_id' => 'integer'
+        'asset' => 'string'
     ];
 
     /**
@@ -71,11 +61,5 @@ class Track extends Model
         'description' => 'required'
     ];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     **/
-    public function album()
-    {
-        return $this->belongsTo(\App\Models\Album::class, 'album_id', 'id');
-    }
+    
 }

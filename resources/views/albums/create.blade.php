@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-12">
-                    <h1>Edit Track</h1>
+                    <h1>Create Album</h1>
                 </div>
             </div>
         </div>
@@ -17,20 +17,22 @@
 
         <div class="card">
 
-            {!! Form::model($track, ['route' => ['tracks.update', $track->id], 'method' => 'patch', 'files' => true]) !!}
+            {!! Form::open(['route' => 'albums.store', 'files' => true]) !!}
 
             <div class="card-body">
+
                 <div class="row">
-                    @include('tracks.fields')
+                    @include('albums.fields')
                 </div>
+
             </div>
 
             <div class="card-footer">
                 {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-                <a href="{{ route('tracks.index') }}" class="btn btn-default">Cancel</a>
+                <a href="{{ route('albums.index') }}" class="btn btn-default">Cancel</a>
             </div>
 
-           {!! Form::close() !!}
+            {!! Form::close() !!}
 
         </div>
     </div>

@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AlbumController;
+use App\Http\Controllers\FileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,14 +25,26 @@ use App\Http\Controllers\ContactController;
 
 Auth::routes();
 
+
+// Route::get('/storage/uploads/{path}', [
+//     'uses'       => 'FileController@file',
+//     'middleware' => ['web', 'auth'],
+//     'as' => 'Files',
+    
+// ]);
+
 // Route::get('/', function () {
 //     Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
 // })->middleware(['auth']);
 
 Route::middleware(['auth'])->group(function()
     {
+
+        Route::get('/storage/uploads/{path}',  [ FileController::class, 'file'])->name('download');
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
+
+        Route::get('/album/{album}', [ AlbumController::class, 'showAlbum'])->name('album');
 
         
         Route::get('/sendemail', 'SendEmailController@index');
@@ -40,13 +54,16 @@ Route::middleware(['auth'])->group(function()
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
         // Route::get('/pedrapao', 'ContactController@contact')->name('contact');
         // Route::post('/contact', 'ContactController@contactPost')->name('contactPost');
-        Route::get('/storage/*');
+        // Route::get('/storage/*');
     });
 
+//     Route::get('storage/music/{file}', [
+//         'middleware' => 'auth',
+//    ]);
 
-    Route::get('/storage', [
-        'middleware' => 'auth',
-   ]);
+//     Route::get('/storage', [
+//         'middleware' => 'auth',
+//    ]);
 
 Route::get('/home', [
     HomeController::class, 'index'
@@ -101,3 +118,5 @@ Route::resource('tracks', App\Http\Controllers\TrackController::class);
 
 
 Route::resource('guests', App\Http\Controllers\GuestController::class);
+
+Route::resource('albums', App\Http\Controllers\AlbumController::class);

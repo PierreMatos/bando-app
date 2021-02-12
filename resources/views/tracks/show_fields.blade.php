@@ -1,25 +1,25 @@
-<!-- Id Field -->
-<div class="col-sm-12">
-    {!! Form::label('id', 'Id:') !!}
-    <p>{{ $track->id }}</p>
-</div>
-
-<!-- Order Field -->
-<div class="col-sm-12">
-    {!! Form::label('order', 'Order:') !!}
-    <p>{{ $track->order }}</p>
-</div>
-
 <!-- Name Field -->
 <div class="col-sm-12">
     {!! Form::label('name', 'Name:') !!}
     <p>{{ $track->name }}</p>
 </div>
 
-<!-- Duration Field -->
+<!-- Description Field -->
 <div class="col-sm-12">
-    {!! Form::label('duration', 'Duration:') !!}
-    <p>{{ $track->duration }}</p>
+    {!! Form::label('description', 'Description:') !!}
+    <p>{{ $track->description }}</p>
+</div>
+
+<!-- Link Field -->
+<div class="col-sm-12">
+    {!! Form::label('link', 'Link:') !!}
+    <p>{{ $track->link }}</p>
+</div>
+
+<!-- Asset Field -->
+<div class="col-sm-12">
+    {!! Form::label('asset', 'Asset:') !!}
+    <p>{{ $track->asset }}</p>
 </div>
 
 <!-- Lyric Field -->
@@ -28,10 +28,22 @@
     <p>{{ $track->lyric }}</p>
 </div>
 
-<!-- Link Field -->
+<!-- Order Field -->
 <div class="col-sm-12">
-    {!! Form::label('link', 'Link:') !!}
-    <p>{{ $track->link }}</p>
+    {!! Form::label('order', 'Order:') !!}
+    <p>{{ $track->order }}</p>
+</div>
+
+<!-- Duração Field -->
+<div class="col-sm-12">
+    {!! Form::label('duração', 'Duração:') !!}
+    <p>{{ $track->duração }}</p>
+</div>
+
+<!-- Album Id Field -->
+<div class="col-sm-12">
+    {!! Form::label('album_id', 'Album Id:') !!}
+    <p>{{ $track->album_id }}</p>
 </div>
 
 <!-- Created At Field -->

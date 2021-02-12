@@ -16,49 +16,60 @@
         "dbType": "string",
         "htmlType": "text",
         "validations": "required",
-        "searchable": true
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     },
     {
         "name": "description",
         "dbType": "string",
         "htmlType": "longtext",
         "validations": "required",
-        "searchable": true
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     },
     {
         "name": "link",
         "dbType": "string",
         "htmlType": "text",
-        "searchable": true
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     },
     {
         "name": "asset",
         "dbType": "string",
-        "htmlType": "file"
+        "htmlType": "file",
+        "validations": "",
+        "searchable": false,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     },
     {
-        "name": "lyric",
-        "dbType": "longtext",
-        "htmlType": "textarea",
-        "searchable": true
-    },
-    {
-        "name": "order",
-        "dbType": "integer",
-        "htmlType": "number",
-        "searchable": true
-    },
-    {
-        "name": "duração",
-        "dbType": "string",
-        "htmlType": "text",
-        "searchable": true
-    },
-    {
-        "name": "album_id",
-        "dbType": "integer:unsigned:default,0:foreign,album,id",
-        "htmlType": "select,Album1:1,Album2:2",
-        "relation": "mt1,Album,album_id,id"
+        "name": "data_lancamento",
+        "dbType": "timestamp",
+        "htmlType": "date",
+        "validations": "",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
     },
     {
         "name": "created_at",
@@ -69,7 +80,8 @@
         "fillable": false,
         "primary": false,
         "inForm": false,
-        "inIndex": false
+        "inIndex": false,
+        "inView": true
     },
     {
         "name": "updated_at",
@@ -80,6 +92,7 @@
         "fillable": false,
         "primary": false,
         "inForm": false,
-        "inIndex": false
+        "inIndex": false,
+        "inView": true
     }
 ]

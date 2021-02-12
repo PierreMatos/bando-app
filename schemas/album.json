@@ -37,28 +37,10 @@
         "htmlType": "file"
     },
     {
-        "name": "lyric",
-        "dbType": "longtext",
-        "htmlType": "textarea",
+        "name": "data_lancamento",
+        "dbType": "timestamp",
+        "htmlType": "date",
         "searchable": true
-    },
-    {
-        "name": "order",
-        "dbType": "integer",
-        "htmlType": "number",
-        "searchable": true
-    },
-    {
-        "name": "duração",
-        "dbType": "string",
-        "htmlType": "text",
-        "searchable": true
-    },
-    {
-        "name": "album_id",
-        "dbType": "integer:unsigned:default,0:foreign,album,id",
-        "htmlType": "select,Album1:1,Album2:2",
-        "relation": "mt1,Album,album_id,id"
     },
     {
         "name": "created_at",

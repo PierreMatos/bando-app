@@ -1,36 +1,30 @@
 <div class="table-responsive">
-    <table class="table" id="tracks-table">
+    <table class="table" id="albums-table">
         <thead>
             <tr>
                 <th>Name</th>
         <th>Description</th>
         <th>Link</th>
         <th>Asset</th>
-        <th>Lyric</th>
-        <th>Order</th>
-        <th>Duração</th>
-        <th>Album Id</th>
+        <th>Data Lancamento</th>
                 <th colspan="3">Action</th>
             </tr>
         </thead>
         <tbody>
-        @foreach($tracks as $track)
+        @foreach($albums as $album)
             <tr>
-                <td>{{ $track->name }}</td>
-            <td>{{ $track->description }}</td>
-            <td>{{ $track->link }}</td>
-            <td>{{ $track->asset }}</td>
-            <td>{{ $track->lyric }}</td>
-            <td>{{ $track->order }}</td>
-            <td>{{ $track->duração }}</td>
-            <td>{{ $track->album_id }}</td>
+                <td>{{ $album->name }}</td>
+            <td>{{ $album->description }}</td>
+            <td>{{ $album->link }}</td>
+            <td>{{ $album->asset }}</td>
+            <td>{{ $album->data_lancamento }}</td>
                 <td width="120">
-                    {!! Form::open(['route' => ['tracks.destroy', $track->id], 'method' => 'delete']) !!}
+                    {!! Form::open(['route' => ['albums.destroy', $album->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>
-                        <a href="{{ route('tracks.show', [$track->id]) }}" class='btn btn-default btn-xs'>
+                        <a href="{{ route('albums.show', [$album->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-eye"></i>
                         </a>
-                        <a href="{{ route('tracks.edit', [$track->id]) }}" class='btn btn-default btn-xs'>
+                        <a href="{{ route('albums.edit', [$album->id]) }}" class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
                         {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}

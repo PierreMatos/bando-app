@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePostRequest;
 use App\Repositories\PostRepository;
 use App\Repositories\TrackRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Repositories\PostTypeRepository;
 use Illuminate\Http\Request;
 use Flash;
 use Illuminate\Contracts\Validation\Validator;
@@ -23,11 +24,15 @@ class PostController extends AppBaseController
     /** @var  PostRepository */
     private $postRepository;
     private $trackRepository;
+    private $postTypeRepository;
 
-    public function __construct(PostRepository $postRepo, TrackRepository $trackRepo)
+
+    public function __construct(PostRepository $postRepo, TrackRepository $trackRepo, PostTypeRepository $postTypeRepo)
     {
         $this->postRepository = $postRepo;
         $this->trackRepository = $trackRepo;
+        $this->postTypeRepository = $postTypeRepo;
+
     }
 
     /**
@@ -61,7 +66,11 @@ class PostController extends AppBaseController
      */
     public function create()
     {
-        return view('posts.create');
+        $postTypes = $this->postTypeRepository->all();
+
+        return view('posts.create')
+                ->with('postTypes', $postTypes);
+
     }
 
     /**

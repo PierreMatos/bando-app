@@ -67,3 +67,19 @@
 </li>
 
 
+<li class="nav-item">
+    <a href="{{ route('tracks.index') }}"
+       class="nav-link {{ Request::is('tracks*') ? 'active' : '' }}">
+        <p>Tracks</p>
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a href="{{ route('albums.index') }}"
+       class="nav-link {{ Request::is('albums*') ? 'active' : '' }}">
+        <p>Albums</p>
+    </a>
+</li>
+
+

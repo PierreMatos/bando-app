@@ -2,16 +2,16 @@
 
 namespace App\Repositories;
 
-use App\Models\Track;
+use App\Models\Album;
 use App\Repositories\BaseRepository;
 
 /**
- * Class TrackRepository
+ * Class AlbumRepository
  * @package App\Repositories
- * @version February 11, 2021, 9:14 pm UTC
+ * @version February 11, 2021, 9:20 pm UTC
 */
 
-class TrackRepository extends BaseRepository
+class AlbumRepository extends BaseRepository
 {
     /**
      * @var array
@@ -19,10 +19,9 @@ class TrackRepository extends BaseRepository
     protected $fieldSearchable = [
         'name',
         'description',
+        'asset',
         'link',
-        'lyric',
-        'order',
-        'duração'
+        'data_lancamento'
     ];
 
     /**
@@ -40,6 +39,6 @@ class TrackRepository extends BaseRepository
      **/
     public function model()
     {
-        return Track::class;
+        return Album::class;
     }
 }

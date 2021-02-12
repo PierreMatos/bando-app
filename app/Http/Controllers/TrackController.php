@@ -29,7 +29,7 @@ class TrackController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $tracks = $this->trackRepository->paginate(10);
+        $tracks = $this->trackRepository->all();
 
         return view('tracks.index')
             ->with('tracks', $tracks);
