@@ -87,7 +87,7 @@
                 <ul>
                   <li><a href="/">Bando</a></li>
                   <li><a href="/album/bembonda">Bem Bonda</a></li>
-                  <li><a href="pedrapao">Pedra-Pão</a></li>
+                  <li><a href="/pedrapao">Pedra-Pão</a></li>
                   <li>
                   <a href="#"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
