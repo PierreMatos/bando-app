@@ -18,7 +18,31 @@ class TrackSeeder extends Seeder
             'order' => 01,
             'name' => "Anunciação",
             'duration' => '04:34',
-            'lyric' => 'letras',
+            'lyric' => "Quem tem mãe tem tudo e pai também
+            Quem não tem também tudo pode ter
+            Mas quem tem pode vadiar 'plo tempo
+            E voltar sempre a casa p’ra comer
+            E voltar sempre a casa p’ra crescer
+            
+            Ó mãe! Deixa lá cheirar o tacho
+            Ó pai! Olha que eu não sei fazer
+            Vá! Que é p’ra ver se eu me despacho
+            Que só tenho a vida inteira pr’a viver!
+            Sou novo tenho mais o que fazer...
+            
+            
+            Quem tem mãe tem tudo e nada tem
+            E quem tem pai tem tudo e nada tem também
+            Mas quem não tem não é menos que os outros
+            Que por terem pensam ser alguém<
+            Tendo ou não tendo são sempre ninguém!
+            
+            
+            Ai mãe! Já deixei queimar o tacho
+            Ai pai! Não fiz como deve ser
+            Vá! que eu um dia logo acho
+            Que tinha a vida inteira p’ra viver!
+            E ouço o que estavas a dizer...",
             'link' => 'storage',
             'album_id' => 1
         ]);

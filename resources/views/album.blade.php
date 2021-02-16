@@ -9,7 +9,8 @@ use Carbon\Carbon;
     <div class="row header-album">
         <div class="col-12 col-md-3 mt-3">
             <div>
-                <img class="card-img-top" src="{{$album->asset}}" alt="{{ $album->name }}" />
+                <img class="card-img-top" src="{{asset($album->image)}}" alt="{{ $album->name }}" />
+                {{-- <img class="card-img-top" src="{{$album->asset}}" alt="{{ $album->name }}" /> --}}
             </div>
 
         </div>
@@ -17,7 +18,8 @@ use Carbon\Carbon;
           <label class="album">album</label>
           <h4>{{$album->name}}</h4>
           <span>em lançamento exlusivo</span><br>
-          <a href="{{$album->link}}" target="_blank">Download aqui</a>
+          <a href="{{ url('assets/album/'.$album->file) }}" target="_blank">Download aqui</a>
+          {{-- <a href="{{ asset($album->link) }}" target="_blank">Download aqui</a> --}}
         </div>
     </div>
 

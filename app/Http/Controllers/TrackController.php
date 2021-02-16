@@ -170,6 +170,7 @@ class TrackController extends AppBaseController
 
         $album = DB::table('albums')->where('id', $track->album_id)->get()->first();
         
+        // timit 4
         $tracks = DB::table('track')->where('album_id', 1)->get();
 
         if (empty($track)) {

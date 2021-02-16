@@ -12,6 +12,15 @@
         "inView": false
     },
     {
+        "name": "slug",
+        "dbType": "string",
+        "htmlType": "",
+        "validations": "",
+        "searchable": true,
+        "inForm": false,
+        "inView": false
+    },
+    {
         "name": "name",
         "dbType": "string",
         "htmlType": "text",
@@ -26,18 +35,17 @@
         "searchable": true
     },
     {
-        "name": "link",
-        "dbType": "string",
-        "htmlType": "text",
-        "searchable": true
-    },
-    {
-        "name": "asset",
+        "name": "file",
         "dbType": "string",
         "htmlType": "file"
     },
     {
-        "name": "data_lancamento",
+        "name": "image",
+        "dbType": "string",
+        "htmlType": "file"
+    },
+    {
+        "name": "release_date",
         "dbType": "timestamp",
         "htmlType": "date",
         "searchable": true

@@ -22,11 +22,12 @@ class AlbumFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->word,
+            'slug' => $this->faker->word,
+        'name' => $this->faker->word,
         'description' => $this->faker->word,
-        'link' => $this->faker->word,
-        'asset' => $this->faker->word,
-        'data_lancamento' => $this->faker->date('Y-m-d H:i:s'),
+        'file' => $this->faker->word,
+        'image' => $this->faker->word,
+        'release_date' => $this->faker->date('Y-m-d H:i:s'),
         'created_at' => $this->faker->date('Y-m-d H:i:s'),
         'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];

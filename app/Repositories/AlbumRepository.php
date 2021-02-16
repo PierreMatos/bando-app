@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class AlbumRepository
  * @package App\Repositories
- * @version February 11, 2021, 9:20 pm UTC
+ * @version February 16, 2021, 9:37 am UTC
 */
 
 class AlbumRepository extends BaseRepository
@@ -17,11 +17,10 @@ class AlbumRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'slug',
         'name',
         'description',
-        'asset',
-        'link',
-        'data_lancamento'
+        'release_date'
     ];
 
     /**

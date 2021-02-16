@@ -9,13 +9,14 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 /**
  * Class Album
  * @package App\Models
- * @version February 11, 2021, 9:20 pm UTC
+ * @version February 16, 2021, 9:37 am UTC
  *
+ * @property string $slug
  * @property string $name
  * @property string $description
- * @property string $link
- * @property string $asset
- * @property string $data_lancamento
+ * @property string $file
+ * @property string $image
+ * @property string $release_date
  */
 class Album extends Model
 {
@@ -31,11 +32,12 @@ class Album extends Model
 
 
     public $fillable = [
+        'slug',
         'name',
         'description',
-        'link',
-        'asset',
-        'data_lancamento'
+        'file',
+        'image',
+        'release_date'
     ];
 
     /**
@@ -45,10 +47,11 @@ class Album extends Model
      */
     protected $casts = [
         'id' => 'integer',
+        'slug' => 'string',
         'name' => 'string',
         'description' => 'string',
-        'link' => 'string',
-        'asset' => 'string'
+        'file' => 'string',
+        'image' => 'string'
     ];
 
     /**
@@ -61,5 +64,14 @@ class Album extends Model
         'description' => 'required'
     ];
 
+        /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
     
 }

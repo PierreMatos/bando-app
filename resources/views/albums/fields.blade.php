@@ -4,40 +4,47 @@
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Name Field -->
+<!-- Description Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('description', 'Description:') !!}
     {!! Form::text('description', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Link Field -->
+<!-- File Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('link', 'Link:') !!}
-    {!! Form::text('link', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Asset Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('asset', 'Asset:') !!}
+    {!! Form::label('file', 'File:') !!}
     <div class="input-group">
         <div class="custom-file">
-            {!! Form::file('asset', ['class' => 'custom-file-input']) !!}
-            {!! Form::label('asset', 'Choose file', ['class' => 'custom-file-label']) !!}
+            {!! Form::file('file', ['class' => 'custom-file-input']) !!}
+            {!! Form::label('file', 'Choose file', ['class' => 'custom-file-label']) !!}
         </div>
     </div>
 </div>
 <div class="clearfix"></div>
 
 
-<!-- Data Lancamento Field -->
+<!-- Image Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('data_lancamento', 'Data Lancamento:') !!}
-    {!! Form::text('data_lancamento', null, ['class' => 'form-control','id'=>'data_lancamento']) !!}
+    {!! Form::label('image', 'Image:') !!}
+    <div class="input-group">
+        <div class="custom-file">
+            {!! Form::file('image', ['class' => 'custom-file-input']) !!}
+            {!! Form::label('image', 'Choose file', ['class' => 'custom-file-label']) !!}
+        </div>
+    </div>
+</div>
+<div class="clearfix"></div>
+
+
+<!-- Release Date Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('release_date', 'Release Date:') !!}
+    {!! Form::text('release_date', null, ['class' => 'form-control','id'=>'release_date']) !!}
 </div>
 
 @push('page_scripts')
     <script type="text/javascript">
-        $('#data_lancamento').datetimepicker({
+        $('#release_date').datetimepicker({
             format: 'YYYY-MM-DD HH:mm:ss',
             useCurrent: true,
             sideBySide: true

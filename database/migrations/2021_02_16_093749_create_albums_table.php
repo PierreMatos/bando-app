@@ -16,11 +16,12 @@ class CreateAlbumsTable extends Migration
     {
         Schema::create('albums', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('slug');
             $table->string('name');
             $table->longText('description');
-            $table->string('link');
-            $table->string('asset');
-            $table->timestamp('data_lancamento');
+            $table->string('file');
+            $table->string('image');
+            $table->timestamp('release_date');
             $table->timestamps();
             $table->softDeletes();
         });

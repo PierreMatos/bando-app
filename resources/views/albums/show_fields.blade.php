@@ -10,22 +10,22 @@
     <p>{{ $album->description }}</p>
 </div>
 
-<!-- Link Field -->
+<!-- File Field -->
 <div class="col-sm-12">
-    {!! Form::label('link', 'Link:') !!}
-    <p>{{ $album->link }}</p>
+    {!! Form::label('file', 'File:') !!}
+    <p>{{ $album->file }}</p>
 </div>
 
-<!-- Asset Field -->
+<!-- Image Field -->
 <div class="col-sm-12">
-    {!! Form::label('asset', 'Asset:') !!}
-    <p>{{ $album->asset }}</p>
+    {!! Form::label('image', 'Image:') !!}
+    <p>{{ $album->image }}</p>
 </div>
 
-<!-- Data Lancamento Field -->
+<!-- Release Date Field -->
 <div class="col-sm-12">
-    {!! Form::label('data_lancamento', 'Data Lancamento:') !!}
-    <p>{{ $album->data_lancamento }}</p>
+    {!! Form::label('release_date', 'Release Date:') !!}
+    <p>{{ $album->release_date }}</p>
 </div>
 
 <!-- Created At Field -->
