@@ -31,6 +31,7 @@ use Carbon\Carbon;
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="card mr-0">
+                      <a href="https://{{ $post->link }}" class="btncard">
                         <img class="card-img-top" src="{{ $post->asset }}" alt="BEM BONDA">
                         <div class="card-body">
                             <div class="left70">
@@ -44,13 +45,12 @@ use Carbon\Carbon;
                         </div>
 
                       <div class="card-footer">
-                        <div class="left">
-                          <a href="{{ $post->link }}">Ver mais</a>
-                        </div>
+
                         <div class="right">
                           <small class="text-muted">  {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small>
                         </div>
                       </div>
+                    </a>
                     </div>
                 </div>
 
@@ -59,6 +59,7 @@ use Carbon\Carbon;
                 @if($post->type_id == 2)
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                  <a href="album/bembonda" target="_blank" class="btncard">
                     <div class="card mr-0">
                         <img class="card-img-top" src="storage/uploads/perfil3.png" alt="BEM BONDA">
                         <div class="card-body">
@@ -76,13 +77,14 @@ use Carbon\Carbon;
 
                         <div class="card-footer">
                           <div class="left">
-                            released: fev 2021
+                          <small class="text-muted">  released: fev 2021</small>
                           </div>
                           <div class="right">
                             <small class="text-muted"> 1 day ago</small>
                           </div>
                         </div>
                     </div>
+                  </a>
                 </div>
 
                 @endif
@@ -91,11 +93,13 @@ use Carbon\Carbon;
                 @if($post->type_id == 7)
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                  <a href="{{ $post->link }}" target="_blank" class="btncard">
                     <div class="card mr-0">
                         <img class="card-img-top" src="{{ $post->asset }}" alt="{{ $post->name }}">
                         <div class="card-body">
                             <div class="left70">
                               <h5 class="card-title">{{ $post->name }}</h5>
+                              <span>{{ $post->description }}</span>
                             </div>
                             <div class="right30">
                                 <label class="criatura-label">Criatura</label>
@@ -103,34 +107,24 @@ use Carbon\Carbon;
                         </div>
 
                         <div class="card-footer">
-                          <div class="left70">
-                            {{ $post->description }}
-                          </div>
                           <div class="right30">
                             <small class="text-muted"> 1 day ago</small>
                           </div>
                         </div>
                     </div>
+                  </a>
                 </div>
 
                 @endif
 
                 @if($post->type_id == 6)
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                  <a href="letra/{{ $post->name }}" class="btncard">
                   <div class="card mr-0 card-lyric" >
                     <div class="lyric">
                       {!! $post->description !!}
                     </div>
                     <div class="card-body">
-                      <div class="col-xs-6 left">
-                          <a href="letra/">
-                              <img src="/storage/css/icon_eye.png"  width="20px;"/>
-                          </a>
-                      </div>
-                      <div class="col-xs-6 right">
-                          <label class="letra">Letra</label>
-                      </div>
-
                       <div class="w-25 mt-3" style="float:left;">
                         <img src="/storage/uploads/perfil3.png" class="mw-100" />
                       </div>
@@ -140,16 +134,21 @@ use Carbon\Carbon;
                           <h6 class="card-title">BEM BONDA - Criatura</h6>
                       </div>
 
+
+                      <div class="col-xs-12 right pt-2">
+                          <label class="letra">Letra</label>
+                      </div>
                     </div>
                     <div class="card-footer">
                       <div class="left">
-                            <small class="text-muted"> Lançamento: Fev. 2021</small>
+                          <small class="text-muted"> Lançamento: Fev. 2021</small>
                       </div>
                       <div class="right">
                         <small class="text-muted"> Now</small>
                       </div>
                     </div>
                 </div>
+              </a>
                 </div>
 
                 @endif
@@ -167,7 +166,6 @@ use Carbon\Carbon;
 
                             <label><img class="" src="http://127.0.0.1:8000/storage/css/type-{{ $post->type_id }}.png"></label>
                             <div class="card-footer">
-
                                 <small class="text-muted"> {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}</small>
                             </div>
 
