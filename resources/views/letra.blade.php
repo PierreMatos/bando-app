@@ -7,47 +7,61 @@ use Carbon\Carbon;
 
 <div class="container bg-white">
     <div class="row header-album">
-        <div class="col-12 col-md-3 mt-3">
-            <div>
-                <img class="card-img-top" src="{{$album->asset}}" alt="{{ $album->name }}" />
-                <span>em lançamento exlusivo</span><br>
-            </div>
-
+        <div class="col-12 col-md-3 pt-3 text-center">
+              <audio id="{{$track->id}}">
+              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "wav")
+                <source src="{{$track->file}}" type="audio/wav">
+              @endif
+              @if(pathinfo($track->link, PATHINFO_EXTENSION) == "mp3")
+                <source src="{{$track->file}}" type="audio/mp3">
+              @endif
+            </audio>
+              <img class="card-img-top" src="{{$album->image}}" alt="{{ $album->name }}" />
+            <span>em lançamento exclusivo</span>
+            <a href="/album/{{$album->name}}" target="_blank">Ver Álbum</a>
         </div>
-        <div class="col-12 col-md-9 mt-3">
-          <label class="letra">letra</label>
+
+        <div class="col-12 col-md-9 pt-5">
+          <label class="letra">Letra</label>
           <h4>{{$track->name}}</h4>
-          <h4>{{$album->name}}</h4>
+          <h5>{{$album->name}}</h5>
           <span>CRIATURA</span>
-
-          <a href="/album/{{$album->name}}" target="_blank">Ver Álbum</a>
+          <audio class="musicplayer" controls>
+            <source src="horse.ogg" type="audio/ogg">
+            <source src="horse.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
         </div>
     </div>
-    <div class="row letratxt">
-      <p>Quem tem mãe tem tudo e pai também<br>
-      Quem não tem também tudo pode ter<br>
-      Mas quem tem pode vadiar 'plo tempo<br>
-      E voltar sempre a casa p’ra comer<br>
-      E voltar sempre a casa p’ra crescer</p>
+
+    <div class="row">
+      <div class="col-12 col-md-3 mt-3"></div>
+      <div class="col-12 col-md-9 mt-3 letra-show">
+
+        {!!$track->lyric!!}
+
+      </div>
+
 
     </div>
 
-
-
-
+    <div class="row standout">
+      @foreach($related as $track)
+        <div class="col-md-3">
+         {{-- TODO Change id to SLUG --}}
+          <a href="{{ $track->id }}">
+            <img class="card-img-top" src="{{$album->image}}" alt="{{ $track->name }}" />
+            <h5>{{$track->name}}</h5>
+            <h4>{{$album->name}}</h4>
+            <span>CRIATURA</span>
+          </a>
+        </div>
+      @endforeach
+    </div>
 </div>
 
 @endsection
 <script>
-document.addEventListener('play', function(e){
-    var audios = document.getElementsByTagName('audio');
-    for(var i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != e.target){
-            audios[i].pause();
-        }
-    }
-}, true);
-
 function playmusic(idmusic){
   document.getElementById(idmusic).play();
   refbtnplay = "btnplay" + idmusic;

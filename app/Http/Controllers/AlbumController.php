@@ -161,7 +161,7 @@ class AlbumController extends AppBaseController
         return redirect(route('albums.index'));
     }
 
-    
+
     /**
      * Display a Album in front end
      *
@@ -182,6 +182,7 @@ class AlbumController extends AppBaseController
 
             return redirect(route('/'));
         }
+      
 
         return view('album')
             ->with('tracks', $tracks)

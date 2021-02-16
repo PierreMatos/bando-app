@@ -206,8 +206,10 @@ label{
 
 .header-album div span{
   font-size: small;
-    color: #B23939;
-    font-weight: 700;
+  color: #B23939;
+  font-weight: 700;
+  display: block;
+  padding: 10px 0 10px 0;
 }
 
 
@@ -335,8 +337,17 @@ button.btn-pause :active {
     font-size: small;
 }
 
+.letra-show p{
+  font-family: "Andale Mono", AndaleMono, monospace;
+  font-size: large;
+  margin-bottom: 50px;
+}
+
 
 @media only screen and (max-width: 575px) {
+.letra-show p{
+  font-size: small;
+}
 
     .menu ul li a {
       padding: 0px 5px 0 5px;
@@ -352,4 +363,23 @@ button.btn-pause :active {
     .header-album div img {
       width: 100%;
   }
+}
+.standout{padding-bottom: 25px;}
+
+.standout h4 {
+    font-size: large;
+}
+
+.standout span{
+  font-size:medium;
+}
+
+.standout a{
+  text-decoration: none;
+  color:black;
+}
+
+.musicplayer{
+  width: 100%;
+  margin-top: 25px;
 }
