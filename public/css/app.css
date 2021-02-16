@@ -11140,10 +11140,6 @@ label {
   }
 }
 
-.card-text {
-  padding-bottom: 25px;
-}
-
 .header-album div {
   display: inline-block;
 }
@@ -11364,5 +11360,9 @@ button.btn-pause :active {
 .card-lyric p {
   font-size: smaller;
   font-family: "Andale Mono", AndaleMono, monospace;
+}
+
+.card:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.25);
 }
 

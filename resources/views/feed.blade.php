@@ -11,7 +11,7 @@ use Carbon\Carbon;
 
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="card mr-0 card-warning" >
+                <div class="card mr-0 card-warning shadow-lg" >
                   <label> mensagem para o bando </label>
                   <p>
                     o Bando é uma
