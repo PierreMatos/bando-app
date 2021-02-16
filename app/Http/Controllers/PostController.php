@@ -210,10 +210,13 @@ class PostController extends AppBaseController
      */
     public function feedPosts(Request $request)
     {
-        $posts = $this->postRepository->all();
+        $posts = $this->postRepository->orderBy('order','asc')->all();
+        $tracks = $this->trackRepository->all();
 
+// TODO Associar tracks a posts
         return view('feed')
-            ->with('posts', $posts);
+            ->with('posts', $posts)
+            ->with('tracks', $tracks);
     }
 
 
