@@ -53,5 +53,7 @@ class PostType extends Model
         'description' => 'required'
     ];
 
-    
+    public function posts(){
+        return $this->hasMany(PostType::class);
+    }
 }

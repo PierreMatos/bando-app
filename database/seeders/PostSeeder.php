@@ -45,7 +45,7 @@ class PostSeeder extends Seeder
             'name' => "BEM BONDA",
             'description' => '03 Lobbysómem',
             'link' => '/storage/music/03_lobbysomem.wav',
-            'asset' => '',
+            'asset' => '/storage/uploads/perfil3.png',
             'type_id' => 2,
             'created_at' => $createdDate->modify('-31 minutes')
         ]);
@@ -55,7 +55,7 @@ class PostSeeder extends Seeder
             'name' => "BEM BONDA",
             'description' => '04 - A Festa do Medo do Gaiteiro',
             'link' => '/storage/music/04 - A Festa do Medo do Gaiteiro.mp3',
-            'asset' => '',
+            'asset' => '/storage/uploads/perfil3.png',
             'type_id' => 2,
             'created_at' => $createdDate->modify('-36 minutes')
         ]);
@@ -66,7 +66,7 @@ class PostSeeder extends Seeder
             'name' => "BEM BONDA",
             'description' => '09 - A Noiva',
             'link' => '/storage/music/09 - A Noiva.mp3.mp3',
-            'asset' => '',
+            'asset' => '/storage/uploads/perfil3.png',
             'type_id' => 2,
             'created_at' => $createdDate->modify('-36 minutes')
         ]);
@@ -76,7 +76,7 @@ class PostSeeder extends Seeder
             'name' => "BEM BONDA",
             'description' => '02 Bem Bonda',
             'link' => '/storage/music/02_bembonda.wav',
-            'asset' => '',
+            'asset' => '/storage/uploads/perfil3.png',
             'type_id' => 2,
             'created_at' => $createdDate->modify('-36 minutes')
         ]);

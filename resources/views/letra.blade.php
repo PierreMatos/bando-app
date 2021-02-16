@@ -8,7 +8,7 @@ use Carbon\Carbon;
 @if(pathinfo($track->file, PATHINFO_EXTENSION) == "wav")
   <source src="{{$track->file}}" type="audio/wav">
 @endif
-@if(pathinfo($track->link, PATHINFO_EXTENSION) == "mp3")
+@if(pathinfo($track->file, PATHINFO_EXTENSION) == "mp3")
   <source src="{{$track->file}}" type="audio/mp3">
 @endif
 </audio>
