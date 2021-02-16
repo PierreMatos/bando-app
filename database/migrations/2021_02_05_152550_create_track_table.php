@@ -16,11 +16,14 @@ class CreateTrackTable extends Migration
     {
         Schema::create('track', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('slug');
             $table->integer('order');
             $table->string('name');
+            $table->string('description')->nullable();
             $table->string('duration');
             $table->longText('lyric')->nullable();
-            $table->string('link');
+            $table->string('file');
+            $table->string('image')->nullable();
             $table->integer('album_id')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();

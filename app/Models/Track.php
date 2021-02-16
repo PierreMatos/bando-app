@@ -37,8 +37,8 @@ class Track extends Model
     public $fillable = [
         'name',
         'description',
-        'link',
-        'asset',
+        'file',
+        'image',
         'lyric',
         'order',
         'duração',
@@ -54,8 +54,8 @@ class Track extends Model
         'id' => 'integer',
         'name' => 'string',
         'description' => 'string',
-        'link' => 'string',
-        'asset' => 'string',
+        'file' => 'string',
+        'image' => 'string',
         'order' => 'integer',
         'duração' => 'string',
         'album_id' => 'integer'
@@ -68,7 +68,6 @@ class Track extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'description' => 'required'
     ];
 
     /**

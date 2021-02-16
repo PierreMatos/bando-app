@@ -16,43 +16,45 @@ class TrackSeeder extends Seeder
     {
         DB::table('track')->insert([
             'order' => 01,
+            'slug' => "anunciacao",
             'name' => "Anunciação",
             'duration' => '04:34',
-            'lyric' => "Quem tem mãe tem tudo e pai também
-            Quem não tem também tudo pode ter
-            Mas quem tem pode vadiar 'plo tempo
-            E voltar sempre a casa p’ra comer
-            E voltar sempre a casa p’ra crescer
-            
-            Ó mãe! Deixa lá cheirar o tacho
-            Ó pai! Olha que eu não sei fazer
-            Vá! Que é p’ra ver se eu me despacho
-            Que só tenho a vida inteira pr’a viver!
-            Sou novo tenho mais o que fazer...
-            
-            
-            Quem tem mãe tem tudo e nada tem
-            E quem tem pai tem tudo e nada tem também
-            Mas quem não tem não é menos que os outros
-            Que por terem pensam ser alguém<
-            Tendo ou não tendo são sempre ninguém!
-            
-            
-            Ai mãe! Já deixei queimar o tacho
-            Ai pai! Não fiz como deve ser
-            Vá! que eu um dia logo acho
-            Que tinha a vida inteira p’ra viver!
-            E ouço o que estavas a dizer...",
-            'link' => 'storage',
+            'lyric' => "<p>Quem tem mãe tem tudo e pai também<br>
+            Quem não tem também tudo pode ter<br>
+            Mas quem tem pode vadiar 'plo tempo<br>
+            E voltar sempre a casa p’ra comer<br>
+            E voltar sempre a casa p’ra crescer</p>
+    
+            <p>Ó mãe! Deixa lá cheirar o tacho<br>
+            Ó pai! Olha que eu não sei fazer<br>
+            Vá! Que é p’ra ver se eu me despacho<br>
+            Que só tenho a vida inteira pr’a viver!<br>
+            Sou novo tenho mais o que fazer...</p>
+    
+            <p>
+            Quem tem mãe tem tudo e nada tem<br>
+            E quem tem pai tem tudo e nada tem também<br>
+            Mas quem não tem não é menos que os outros<br>
+            Que por terem pensam ser alguém<br>
+            Tendo ou não tendo são sempre ninguém!</p>
+    
+            <p>
+            Ai mãe! Já deixei queimar o tacho<br>
+            Ai pai! Não fiz como deve ser<br>
+            Vá! que eu um dia logo acho<br>
+            Que tinha a vida inteira p’ra viver!<br>
+            E ouço o que estavas a dizer...</p>",
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 02,
+            'slug' => 'bembonda',
             'name' => "Bem Bonda",
             'duration' => '08:13',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
 
         ]);
@@ -60,84 +62,93 @@ class TrackSeeder extends Seeder
     
         DB::table('track')->insert([
             'order' => 03,
+            'slug' => "lobbysomem",
             'name' => "Lobbysómem",
             'duration' => '06:08',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
 
         ]);
     
         DB::table('track')->insert([
             'order' => 04,
+            'slug' => "afestadomedodogaiteiro",
             'name' => "A Festa do Medo do Gaiteiro",
             'duration' => '03:51',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
 
         ]);
     
         DB::table('track')->insert([
             'order' => 05,
+            'slug' => "dapraxe",
             'name' => "Da Praxe",
             'duration' => '09:23',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 06,
+            'slug' => "opadeirpparte1",
             'name' => "O Padeiro - Parte 1",
             'duration' => '06:45',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 07,
+            'slug' => "opadeirpparte2",
             'name' => "O Padeiro - Parte 2",
             'duration' => '05:21',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 8,
+            'slug' => " onamoro",
             'name' => " O Namoro",
             'duration' => '00:59',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 9,
+            'slug' => "anoiva",
             'name' => "A Noiva",
             'duration' => '07:41',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 10,
+            'slug' => "oencanto",
             'name' => "O Encanto",
             'duration' => '00:59',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
     
         DB::table('track')->insert([
             'order' => 11,
+            'slug' => "amae",
             'name' => "À Mãe",
             'duration' => '03:17',
             'lyric' => 'letras',
-            'link' => 'storage',
+            'file' => 'storage',
             'album_id' => 1
         ]);
 
