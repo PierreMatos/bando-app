@@ -80,7 +80,7 @@ class Post extends Model
      */
     public function track()
     {
-        // return $this->belongsTo(Track::class);
+        return $this->belongsTo(Track::class, 'track_id', 'id');
 
     }
 }
