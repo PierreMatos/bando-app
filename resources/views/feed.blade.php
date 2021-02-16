@@ -9,6 +9,7 @@ use Carbon\Carbon;
     <div class="row justify-content-center">
         <div class="card-deck">
 
+
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                 <div class="card mr-0 card-warning" >
                   <label> mensagem para o bando </label>
@@ -25,7 +26,7 @@ use Carbon\Carbon;
             </div>
 
             @foreach($posts as $post)
-            
+
                 @if($post->type_id == 1)
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
@@ -39,7 +40,7 @@ use Carbon\Carbon;
                             <div class="right30">
                                 <label class="album">Album</label>
                             </div>
-                            <p class="card-text">{{ $post->description }}</p>
+                            <p class="card-text">{{ Str::limit($post->description, 162) }}</p>
                         </div>
 
                       <div class="card-footer">
@@ -110,6 +111,45 @@ use Carbon\Carbon;
                           </div>
                         </div>
                     </div>
+                </div>
+
+                @endif
+
+                @if($post->type_id == 6)
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                  <div class="card mr-0 card-lyric" >
+                    <div class="lyric">
+                      {!! $post->description !!}
+                    </div>
+                    <div class="card-body">
+                      <div class="col-xs-6 left">
+                          <a href="letra/">
+                              <img src="/storage/css/icon_eye.png"  width="20px;"/>
+                          </a>
+                      </div>
+                      <div class="col-xs-6 right">
+                          <label class="letra">Letra</label>
+                      </div>
+
+                      <div class="w-25 mt-3" style="float:left;">
+                        <img src="/storage/uploads/perfil3.png" class="mw-100" />
+                      </div>
+
+                      <div class="w-75 mt-3 pl-2" style="float:right;">
+                          <h5 class="card-title">{{ $post->name }}</h5>
+                          <h6 class="card-title">BEM BONDA - Criatura</h6>
+                      </div>
+
+                    </div>
+                    <div class="card-footer">
+                      <div class="left">
+                            <small class="text-muted"> Lançamento: Fev. 2021</small>
+                      </div>
+                      <div class="right">
+                        <small class="text-muted"> Now</small>
+                      </div>
+                    </div>
+                </div>
                 </div>
 
                 @endif

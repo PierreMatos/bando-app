@@ -68,7 +68,6 @@
 
 .card-body{
   padding:0px;
-  padding-top: 10px;
   margin-top: 10px;
 }
 
@@ -173,6 +172,7 @@ h5{
 
 label{
   font-family: 'Nunito';
+  margin: 5px 0 5px 0;
 }
 
 .card-footer {
@@ -215,8 +215,10 @@ label{
 
 .header-album div a {
     color: black;
-    font-size: small;
+    font-size: medium;
     font-weight: 600;
+    display: block;
+    margin: 25px 0;
 }
 
 .infoalbum{
@@ -382,4 +384,23 @@ button.btn-pause :active {
 .musicplayer{
   width: 100%;
   margin-top: 25px;
+}
+.card-lyric h5{
+  text-align: left;
+}
+.card-lyric h6{
+  font-size:small;
+  text-align: left;
+}
+.lyric{
+  max-height:280px;
+  overflow: hidden;
+  border: 1px solid #8080803b;
+  padding:5px;
+
+}
+
+.card-lyric p{
+  font-size: smaller;
+  font-family: "Andale Mono", AndaleMono, monospace;
 }

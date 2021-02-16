@@ -7,16 +7,13 @@ use Carbon\Carbon;
 
 <div class="container bg-white">
     <div class="row header-album">
-        <div class="col-12 col-md-3 mt-3">
-            <div>
+        <div class="col-12 col-md-3 mt-3 text-center order-md-1 order-2">
                 <img class="card-img-top" src="{{$album->image}}" alt="{{ $album->name }}" />
-            </div>
-
         </div>
-        <div class="col-12 col-md-9 mt-3">
-          <label class="album">album</label>
+        <div class="col-12 col-md-9 mt-5 order-md-2 order-1">
           <h4>{{$album->name}}</h4>
-          <span>em lançamento exlusivo</span><br>
+          <h5>em lançamento exclusivo</h5>
+          <label class="album">Álbum</label>
           <a href="{{$album->file}}" target="_blank">Download aqui</a>
         </div>
     </div>
