@@ -9,16 +9,16 @@ use Carbon\Carbon;
     <div class="row header-album">
         <div class="col-12 col-md-3 pt-3 text-center">
               <audio id="{{$track->id}}">
-              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "wav")
-                <source src="{{$track->file}}" type="audio/wav">
+              @if(pathinfo(url('assets/tracks'.$track->file), PATHINFO_EXTENSION) == "wav")
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
               @endif
-              @if(pathinfo($track->link, PATHINFO_EXTENSION) == "mp3")
+              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "mp3")
                 <source src="{{$track->file}}" type="audio/mp3">
               @endif
             </audio>
               <img class="card-img-top" src="{{$album->image}}" alt="{{ $album->name }}" />
             <span>em lançamento exclusivo</span>
-            <a href="/album/{{$album->name}}" target="_blank">Ver Álbum</a>
+            <a href="/album/{{$album->slug}}" target="_blank">Ver Álbum</a>
         </div>
 
         <div class="col-12 col-md-9 pt-5">
@@ -27,8 +27,8 @@ use Carbon\Carbon;
           <h5>{{$album->name}}</h5>
           <span>CRIATURA</span>
           <audio class="musicplayer" controls>
-            <source src="horse.ogg" type="audio/ogg">
-            <source src="horse.mp3" type="audio/mpeg">
+            <source src={{url('assets/tracks/'.$track->file)}} type="audio/ogg">
+            <source src={{url('assets/tracks/'.$track->file)}} type="audio/mpeg">
           Your browser does not support the audio element.
           </audio>
         </div>
@@ -49,7 +49,7 @@ use Carbon\Carbon;
       @foreach($related as $track)
         <div class="col-md-3">
          {{-- TODO Change id to SLUG --}}
-          <a href="{{ $track->id }}">
+          <a href="{{ $track->slug }}">
             <img class="card-img-top" src="{{$album->image}}" alt="{{ $track->name }}" />
             <h5>{{$track->name}}</h5>
             <h4>{{$album->name}}</h4>

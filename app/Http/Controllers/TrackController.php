@@ -174,14 +174,15 @@ class TrackController extends AppBaseController
      *
      * @return Response
      */
-    public function showTrackWithRelated($id)
+    public function showTrackWithRelated($slug)
     {
-        $track = $this->trackRepository->find($id);
+        // $track = $this->trackRepository->find($id);
+        $track = DB::table('track')->where('slug', $slug)->get()->first();
 
         $album = DB::table('albums')->where('id', $track->album_id)->get()->first();
         
         // timit 4
-        $tracks = DB::table('track')->where('album_id', 1)->get();
+        $tracks = DB::table('track')->where('album_id', 1)->limit(4)->get();
 
         if (empty($track)) {
             Flash::error('Track not found');

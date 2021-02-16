@@ -17,7 +17,7 @@ use Carbon\Carbon;
           <label class="album">album</label>
           <h4>{{$album->name}}</h4>
           <span>em lançamento exlusivo</span><br>
-          <a href="{{$album->file}}" target="_blank">Download aqui</a>
+          <a href="{{url('assets/album/'.$album->file)}}" target="_blank">Download aqui</a>
         </div>
     </div>
 
@@ -26,11 +26,11 @@ use Carbon\Carbon;
       <tbody>
         @foreach ($tracks as $track)
             <audio id="{{$track->id}}">
-              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "wav")
-                <source src="{{$track->file}}" type="audio/wav">
+              @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "wav")
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
               @endif
-              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "mp3")
-                <source src="{{$track->file}}" type="audio/mp3">
+              @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "mp3")
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/mp3">
               @endif
             </audio>
 
