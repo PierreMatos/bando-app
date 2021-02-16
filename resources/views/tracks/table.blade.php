@@ -4,8 +4,8 @@
             <tr>
                 <th>Name</th>
         <th>Description</th>
-        <th>Link</th>
-        <th>Asset</th>
+        <th>File</th>
+        <th>Image</th>
         <th>Lyric</th>
         <th>Order</th>
         <th>Duração</th>
@@ -18,11 +18,11 @@
             <tr>
                 <td>{{ $track->name }}</td>
             <td>{{ $track->description }}</td>
-            <td>{{ $track->link }}</td>
-            <td>{{ $track->asset }}</td>
+            <td>{{ $track->file }}</td>
+            <td>{{ $track->image }}</td>
             <td>{{ $track->lyric }}</td>
             <td>{{ $track->order }}</td>
-            <td>{{ $track->duração }}</td>
+            <td>{{ $track->duration }}</td>
             <td>{{ $track->album_id }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['tracks.destroy', $track->id], 'method' => 'delete']) !!}

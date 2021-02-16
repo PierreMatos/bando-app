@@ -116,13 +116,23 @@ class TrackController extends AppBaseController
     {
         $track = $this->trackRepository->find($id);
 
+        $input = $request->all();
+
+        $file = $input['file'];
+
+        $filename = $request->file('file')->hashName();
+        $InfrasFileName = $file->storeAs('assets/tracks', $filename);
+
+        $input['file'] = $filename;
+
+       
         if (empty($track)) {
             Flash::error('Track not found');
 
             return redirect(route('tracks.index'));
         }
 
-        $track = $this->trackRepository->update($request->all(), $id);
+        $track = $this->trackRepository->update($input, $id);
 
         Flash::success('Track updated successfully.');
 

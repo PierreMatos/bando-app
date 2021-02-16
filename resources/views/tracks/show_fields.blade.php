@@ -10,15 +10,15 @@
     <p>{{ $track->description }}</p>
 </div>
 
-<!-- Link Field -->
+<!-- file Field -->
 <div class="col-sm-12">
-    {!! Form::label('link', 'Link:') !!}
+    {!! Form::label('file', 'File:') !!}
     <p>{{ $track->link }}</p>
 </div>
 
-<!-- Asset Field -->
+<!-- Image Field -->
 <div class="col-sm-12">
-    {!! Form::label('asset', 'Asset:') !!}
+    {!! Form::label('image', 'Image:') !!}
     <p>{{ $track->asset }}</p>
 </div>
 

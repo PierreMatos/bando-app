@@ -62,6 +62,13 @@ class AlbumController extends AppBaseController
     {
         $input = $request->all();
 
+        $file = $input['file'];
+
+        $filename = $request->file('file')->hashName();
+        $InfrasFileName = $file->storeAs('assets/album', $filename);
+
+        $input['file'] = $filename;
+
         $album = $this->albumRepository->create($input);
 
         Flash::success('Album saved successfully.');
