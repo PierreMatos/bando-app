@@ -17,11 +17,12 @@ class AlbumTableSeeder extends Seeder
     {
         DB::table('albums')->insert([
             'id' => 1,
+            'slug' => "bembonda",
             'name' => "Bem Bonda",
             'description' => '“Bem Bonda“, o disco da Criatura, é um resgate da ancestralidade linguística beiroa, uma expressão mutável, dependente das gentes e dos lugares, que dentro do mundo dos significados nos lembra não só que “já chega”, como também que, “como se não bastasse”, “um mal nunca vem só”.',
-            'link' => 'http://criaturamusic.com/bembonda',
-            'asset' => '/storage/uploads/perfil3.png',
-            'data_lancamento' => Carbon::create('2021', '02', '05'),
+            'file' => 'http://criaturamusic.com/bembonda',
+            'image' => '/storage/uploads/perfil3.png',
+            'release_date' => Carbon::create('2021', '02', '05'),
         ]);
     }
 }

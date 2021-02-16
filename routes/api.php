@@ -42,4 +42,10 @@ Route::resource('tracks', App\Http\Controllers\API\TrackAPIController::class);
 
 Route::resource('guests', App\Http\Controllers\API\GuestAPIController::class);
 
+
+
+
+
+
+
 Route::resource('albums', App\Http\Controllers\API\AlbumAPIController::class);

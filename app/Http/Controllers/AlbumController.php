@@ -8,9 +8,9 @@ use App\Repositories\AlbumRepository;
 use App\Repositories\TrackRepository;
 use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
-use Flash;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Flash;
 use Response;
 
 class AlbumController extends AppBaseController
@@ -23,6 +23,7 @@ class AlbumController extends AppBaseController
     {
         $this->albumRepository = $albumRepo;
         $this->trackRepository = $trackRepo;
+
     }
 
     /**
@@ -60,8 +61,6 @@ class AlbumController extends AppBaseController
     public function store(CreateAlbumRequest $request)
     {
         $input = $request->all();
-
-        Storage::put($request->name, $request->asset, 'private');
 
         $album = $this->albumRepository->create($input);
 
@@ -122,13 +121,21 @@ class AlbumController extends AppBaseController
     {
         $album = $this->albumRepository->find($id);
 
+        $input = $request->all();
+        $file = $input['file'];
+
+        $filename = $request->file('file')->hashName();
+        $InfrasFileName = $file->storeAs('assets/album', $filename);
+
+        $input['file'] = $filename;
+
         if (empty($album)) {
             Flash::error('Album not found');
 
             return redirect(route('albums.index'));
         }
 
-        $album = $this->albumRepository->update($request->all(), $id);
+        $album = $this->albumRepository->update($input, $id);
 
         Flash::success('Album updated successfully.');
 
@@ -162,6 +169,7 @@ class AlbumController extends AppBaseController
     }
 
 
+    
     /**
      * Display a Album in front end
      *
@@ -172,8 +180,7 @@ class AlbumController extends AppBaseController
     public function showAlbum($album)
     {
         // TODO No create preencher campo slug
-
-        $album = DB::table('albums')->where('name', $album)->get()->first();
+        $album = DB::table('albums')->where('slug', $album)->get()->first();
 
         $tracks = DB::table('track')->where('album_id', 1)->get();
 
@@ -182,7 +189,6 @@ class AlbumController extends AppBaseController
 
             return redirect(route('/'));
         }
-      
 
         return view('album')
             ->with('tracks', $tracks)

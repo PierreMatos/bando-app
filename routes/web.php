@@ -26,22 +26,12 @@ use App\Http\Controllers\TrackController;
 
 Auth::routes();
 
-
-// Route::get('/storage/uploads/{path}', [
-//     'uses'       => 'FileController@file',
-//     'middleware' => ['web', 'auth'],
-//     'as' => 'Files',
-    
-// ]);
-
-// Route::get('/', function () {
-//     Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
-// })->middleware(['auth']);
+//Only logged users can download assets 
+Route::get('/assets/{cat}/{filename}', [ FileController::class, 'file'])->name('get.file')->middleware(['auth']);
 
 Route::middleware(['auth'])->group(function()
     {
 
-        Route::get('/storage/uploads/{path}',  [ FileController::class, 'file'])->name('download');
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
 
@@ -120,5 +110,11 @@ Route::resource('tracks', App\Http\Controllers\TrackController::class);
 
 
 Route::resource('guests', App\Http\Controllers\GuestController::class);
+
+
+
+
+
+
 
 Route::resource('albums', App\Http\Controllers\AlbumController::class);

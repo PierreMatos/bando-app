@@ -7,19 +7,14 @@ use Illuminate\Support\Facades\Storage;
 
 class FileController extends Controller
 {
-    public function file($path)
+    public function file($cat, $filename)
     {
+    //   TODO count de downloads
+        return response()->download(storage_path('app/assets/'.$cat.'/'.$filename),null,[],null);
+
+        return Storage::disk('private')->get($filename);
+
+
       
-
-        $contents = Storage::get('rp.JPG');
-        Storage::setVisibility('/uploads/pao.PNG', 'private');
-
-        // $visibility = Storage::getVisibility('/uploads/acacio.jpg');
-
-        // $visibility = Storage::get('/uploads/acacio.PNG');
-
-        // $storagePath = storage_path('app/images/users/' . $user_id . '/' . $slug);
-        return  Storage::get($path);
-        // return Storage::get('path/to/phpunit.xml');
     }
 }
