@@ -74,4 +74,13 @@ class Post extends Model
     {
         return $this->belongsTo(\App\Models\PostType::class, 'type_id', 'id');
     }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function track()
+    {
+        // return $this->belongsTo(Track::class);
+
+    }
 }

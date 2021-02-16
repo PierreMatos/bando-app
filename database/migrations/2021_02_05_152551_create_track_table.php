@@ -27,8 +27,7 @@ class CreateTrackTable extends Migration
             $table->integer('album_id')->unsigned()->default(0);
             $table->timestamps();
             $table->softDeletes();
-            $table->foreign('album_id')->references('id')->on('posts');
-
+            $table->foreign('album_id')->references('id')->on('albums');
         });
     }
 

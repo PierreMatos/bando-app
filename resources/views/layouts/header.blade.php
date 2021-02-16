@@ -86,7 +86,7 @@
             <div class="menu pt-1">
                 <ul>
                   <li><a href="/">Bando</a></li>
-                  <li><a href="bembonda">Bem Bonda</a></li>
+                  <li><a href="/album/bembonda">Bem Bonda</a></li>
                   <li><a href="pedrapao">Pedra-Pão</a></li>
                   <li>
                   <a href="#"
