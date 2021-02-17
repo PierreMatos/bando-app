@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateAlbumRequest;
 use App\Repositories\AlbumRepository;
 use App\Repositories\TrackRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -86,7 +87,7 @@ class AlbumController extends AppBaseController
     public function show($id)
     {
         $album = $this->albumRepository->find($id);
-
+ 
         if (empty($album)) {
             Flash::error('Album not found');
 

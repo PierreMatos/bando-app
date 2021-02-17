@@ -21,6 +21,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "3.0",
         "laravelcollective/html": "^6.2",
+        "laravelista/comments": "^4.4",
         "zfr/zfr-shopify": "6.0"
     },
     "require-dev": {

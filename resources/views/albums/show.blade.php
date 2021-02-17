@@ -16,6 +16,7 @@
             </div>
         </div>
     </section>
+    @comments(['model' => $album])
 
     <div class="content px-3">
         <div class="card">

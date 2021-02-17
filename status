@@ -1,0 +1,22 @@
+Migrating: 2021_02_03_122931_create_posts_table
+
+   Illuminate\Database\QueryException 
+
+  SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'posts' already exists (SQL: create table `posts` (`id` int unsigned not null auto_increment primary key, `name` varchar(255) not null, `description` longtext not null, `link` varchar(255) null, `asset` varchar(255) not null, `type_id` int unsigned not null default '0', `created_at` timestamp null, `updated_at` timestamp null, `deleted_at` timestamp null) default character set utf8mb4 collate 'utf8mb4_unicode_ci')
+
+  at C:\xampp\htdocs\bando-app\vendor\laravel\framework\src\Illuminate\Database\Connection.php:678
+    674▕         // If an exception occurs when attempting to run a query, we'll format the error
+    675▕         // message to include the bindings with SQL, which will make this exception a
+    676▕         // lot more helpful to the developer instead of just the database's errors.
+    677▕         catch (Exception $e) {
+  ➜ 678▕             throw new QueryException(
+    679▕                 $query, $this->prepareBindings($bindings), $e
+    680▕             );
+    681▕         }
+    682▕
+
+  1   C:\xampp\htdocs\bando-app\vendor\doctrine\dbal\lib\Doctrine\DBAL\Driver\PDO\Exception.php:18
+      Doctrine\DBAL\Driver\PDO\Exception::("SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'posts' already exists")
+
+  2   C:\xampp\htdocs\bando-app\vendor\doctrine\dbal\lib\Doctrine\DBAL\Driver\PDOStatement.php:117
+      Doctrine\DBAL\Driver\PDO\Exception::new(Object(PDOException))

@@ -6,6 +6,7 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+
 /**
  * Class Post
  * @package App\Models
@@ -22,7 +23,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Post extends Model
 {
     use SoftDeletes;
-
     use HasFactory;
 
     public $table = 'posts';
