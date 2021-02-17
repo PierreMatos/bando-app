@@ -199,5 +199,8 @@ abstract class BaseRepository
         return $model->delete();
     }
 
-    
+    public function findBy($att, $column)
+	{
+		return $this->model->where($att, $column)->get();
+	}
 }

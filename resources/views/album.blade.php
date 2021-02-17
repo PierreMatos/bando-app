@@ -87,6 +87,8 @@ use Carbon\Carbon;
 
     </div>
 
+    @comments(['model' => $album])
+
     <footer class="row">
     @include('layouts.footer')
 </footer>

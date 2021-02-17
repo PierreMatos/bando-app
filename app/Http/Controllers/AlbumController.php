@@ -87,7 +87,7 @@ class AlbumController extends AppBaseController
     public function show($id)
     {
         $album = $this->albumRepository->find($id);
- 
+
         if (empty($album)) {
             Flash::error('Album not found');
 
@@ -185,10 +185,11 @@ class AlbumController extends AppBaseController
      *
      * @return Response
      */
-    public function showAlbum($album)
+    public function showAlbum($slug)
     {
         // TODO No create preencher campo slug
-        $album = DB::table('albums')->where('slug', $album)->get()->first();
+        // $album = new Album(DB::table('albums')->where('slug', $album)->get()->first());
+        $album = $this->albumRepository->findBy('slug', $slug)->first();
 
         $tracks = DB::table('track')->where('album_id', 1)->get();
 
