@@ -76,11 +76,20 @@ class Post extends Model
     }
 
     /**
-     * Get the comments for the blog post.
+     * Get the track from a post.
      */
     public function track()
     {
-        // return $this->belongsTo(Track::class);
+        return $this->belongsTo(Track::class, 'track_id', 'id');
+
+    }
+
+     /**
+     * Get the album from the post.
+     */
+    public function album()
+    {
+        return $this->belongsTo(Album::class, 'album_id', 'id');
 
     }
 }

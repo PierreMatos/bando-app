@@ -77,4 +77,8 @@ class Track extends Model
     {
         return $this->belongsTo(\App\Models\Album::class, 'album_id', 'id');
     }
+
+    public function post(){
+        return $this->has(PostType::class);
+    }
 }
