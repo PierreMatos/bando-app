@@ -4,14 +4,6 @@ use Carbon\Carbon;
 ?>
   @extends('layouts.header')
   @section('content')
-  <audio id="{{$track->id}}">
-  @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "wav")
-    <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
-  @endif
-  @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "mp3")
-    <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/mp3">
-  @endif
-  </audio>
 
 <div class="container bg-white">
     <div class="row header-album">
@@ -26,7 +18,14 @@ use Carbon\Carbon;
             <span>CRIATURA</span>
             <label class="letra">Letra</label>
               <a href="/album/{{$album->slug}}" target="_blank">Ver Álbum</a>
-            <audio class="musicplayer" controls></audio>
+            <audio class="musicplayer" controls>
+              @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "wav")
+              <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
+              @endif
+              @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "mp3")
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/mp3">
+              @endif
+            </audio>
         </div>
     </div>
     <div class="row">
