@@ -31,7 +31,7 @@ use Carbon\Carbon;
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="card mr-0">
-                      <a href="https://{{ $post->link }}" class="btncard">
+                      <a href="{{ url($post->link) }}" class="btncard">
                         <img class="card-img-top" src="{{ $post->asset }}" alt="BEM BONDA">
                         <div class="card-body">
                             <div class="left70">
@@ -59,7 +59,8 @@ use Carbon\Carbon;
                 @if($post->type_id == 2)
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                  <a href="album/bembonda" target="_blank" class="btncard">
+                  <a href="{{url('album/'.$post->track->album->slug)}}" target="_blank" class="btncard">
+                  {{-- <a href="album/bembonda" target="_blank" class="btncard"> --}}
                     <div class="card mr-0">
                         <img class="card-img-top" src="storage/uploads/perfil3.png" alt="BEM BONDA">
                         <div class="card-body">
