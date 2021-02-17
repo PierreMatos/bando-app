@@ -11015,6 +11015,7 @@ a.text-dark:focus {
 
 p.card-text {
   display: inline-table;
+  padding-top: 10px;
 }
 
 .left {
