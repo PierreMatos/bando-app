@@ -14,7 +14,7 @@ use Carbon\Carbon;
           <h4>{{$album->name}}</h4>
           <h5>em lançamento exclusivo</h5>
           <label class="album">Álbum</label>
-          <a href="{{$album->file}}" target="_blank">Download aqui</a>
+          <a href="{{ url('assets/album/'.$album->file)}}" target="_blank">Download aqui</a>
         </div>
     </div>
 
@@ -38,7 +38,7 @@ use Carbon\Carbon;
               </th>
               <td>{{$track->name}}</td>
               <td>{{$track->duration}}</td>
-              <td><label class="letra">Letra</label></td>
+              <td> <label class="letra"><a href="{{url('letra/'.$track->slug)}}"> Letra </a></label> </td>
             </tr>
         @endforeach
       </tbody>

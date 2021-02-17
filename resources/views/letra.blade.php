@@ -8,7 +8,7 @@ use Carbon\Carbon;
 <div class="container bg-white">
     <div class="row header-album">
         <div class="col-12 col-md-3 pt-3 text-center order-md-2 order-1">
-            <img class="card-img-top" src="{{$album->image}}" alt="{{ $album->name }}" />
+           <a> <img class="card-img-top" src="{{$album->image}}" alt="{{ $album->name }}" /> </a>
             <span>em lançamento exclusivo</span>
 
         </div>

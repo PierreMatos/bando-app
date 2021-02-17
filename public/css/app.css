@@ -11290,6 +11290,11 @@ button.btn-pause :active {
   font-size: small;
 }
 
+.letra a {
+  color: #000000;
+  cursor: inherit;
+}
+
 .letra-show p {
   font-family: "Andale Mono", AndaleMono, monospace;
   font-size: large;
