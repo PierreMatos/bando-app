@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Artisan;
 // });
 
 
-Artisan::call('down');
+// Artisan::call('down');
 Auth::routes();
 
 //Only logged users can download assets 
