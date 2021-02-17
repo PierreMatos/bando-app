@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\TrackController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ use App\Http\Controllers\TrackController;
 //     return view('welcome');
 // });
 
+
+Artisan::call('down');
 Auth::routes();
 
 //Only logged users can download assets 
@@ -46,7 +49,6 @@ Route::middleware(['auth'])->group(function()
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
 
 
-        
         Route::resource('postTypes', App\Http\Controllers\PostTypeController::class);
 
         Route::resource('posts', App\Http\Controllers\PostController::class);
@@ -61,13 +63,6 @@ Route::middleware(['auth'])->group(function()
 
     });
 
-//     Route::get('storage/music/{file}', [
-//         'middleware' => 'auth',
-//    ]);
-
-//     Route::get('/storage', [
-//         'middleware' => 'auth',
-//    ]);
 
 Route::get('/home', [
     HomeController::class, 'index'
