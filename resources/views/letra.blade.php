@@ -47,6 +47,9 @@ use Carbon\Carbon;
         </div>
       @endforeach
     </div>
+  <footer class="row">
+    @include('layouts.footer')
+</footer>
 </div>
 
 @endsection

@@ -31,7 +31,7 @@ use Carbon\Carbon;
 
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <div class="card mr-0">
-                      <a href="{{url('album'.$post->link) }}" class="btncard">
+                      <a href="{{url($post->link) }}" class="btncard">
                         <img class="card-img-top" src="{{ $post->asset }}" alt="BEM BONDA">
                         <div class="card-body">
                             <div class="left70">
