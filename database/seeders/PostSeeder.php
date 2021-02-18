@@ -65,7 +65,7 @@ class PostSeeder extends Seeder
             'order' => 11,
             'name' => "BEM BONDA",
             'description' => '09 - A Noiva',
-            'link' => '/storage/music/09 - A Noiva.mp3.mp3',
+            'link' => '/storage/music/09 - A Noiva.mp3',
             'asset' => '/storage/uploads/perfil3.png',
             'type_id' => 2,
             'created_at' => $createdDate->modify('-36 minutes')

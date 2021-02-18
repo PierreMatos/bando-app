@@ -18,10 +18,11 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             // GuestSeeder::class,
-            UserSeeder::class,
-            PostTypeSeeder::class,
+            // UserSeeder::class,
+            // PostTypeSeeder::class,
             PostSeeder::class,
             TrackSeeder::class,
+            AlbumSeeder::class,
         ]);
     }
 }

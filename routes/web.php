@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\TrackController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,22 +25,15 @@ use App\Http\Controllers\TrackController;
 //     return view('welcome');
 // });
 
+
+// Artisan::call('down');
 Auth::routes();
 
-//Only logged users can download assets
+//Only logged users can download assets 
 Route::get('/assets/{cat}/{filename}', [ FileController::class, 'file'])->name('get.file')->middleware(['auth']);
 
 Route::middleware(['auth'])->group(function()
     {
-      Route::get('/criatura', function () {
-           return view('criatura');
-     });
-
-     Route::get('/contatos', function () {
-          return view('contatos');
-    });
-
-
 
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
@@ -47,13 +41,12 @@ Route::middleware(['auth'])->group(function()
         Route::get('/album/{album}', [ AlbumController::class, 'showAlbum'])->name('album');
         Route::get('/letra/{slug}', [ TrackController::class, 'showTrackWithRelated'])->name('letra');
 
-
+        
         Route::get('/sendemail', 'SendEmailController@index');
         Route::post('/sendemail/send', 'SendEmailController@send');
 
         Route::get('/pedrapao', [ ContactController::class, 'contact'])->name('pedrapao');
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
-
 
 
         Route::resource('postTypes', App\Http\Controllers\PostTypeController::class);
@@ -70,13 +63,6 @@ Route::middleware(['auth'])->group(function()
 
     });
 
-//     Route::get('storage/music/{file}', [
-//         'middleware' => 'auth',
-//    ]);
-
-//     Route::get('/storage', [
-//         'middleware' => 'auth',
-//    ]);
 
 Route::get('/home', [
     HomeController::class, 'index'
@@ -97,3 +83,4 @@ Route::get('/home', [
 //     'generator_builder/generate-from-file',
 //     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 // )->name('io_generator_builder_generate_from_file');
+

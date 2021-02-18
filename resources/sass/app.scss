@@ -336,12 +336,14 @@ button.btn-pause :active {
     font-size: small;
 }
 
+.letra a {
+  color:#000000;
+}
+
 .letra-show p{
   font-family: "Andale Mono", AndaleMono, monospace;
   font-size: large;
-  margin-bottom: 50px;
 }
-
 
 @media only screen and (max-width: 575px) {
 .letra-show p{

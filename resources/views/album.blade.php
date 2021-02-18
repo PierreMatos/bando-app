@@ -14,7 +14,7 @@ use Carbon\Carbon;
           <h4>{{$album->name}}</h4>
           <h5>em lançamento exclusivo</h5>
           <label class="album">Álbum</label>
-          <a href="{{$album->file}}" target="_blank">Download aqui</a>
+          <a href="{{ url('assets/album/'.$album->file)}}" target="_blank">Download aqui</a>
         </div>
     </div>
 
@@ -23,11 +23,11 @@ use Carbon\Carbon;
       <tbody>
         @foreach ($tracks as $track)
             <audio id="{{$track->id}}">
-              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "wav")
-                <source src="{{$track->file}}" type="audio/wav">
+              @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "wav")
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
               @endif
-              @if(pathinfo($track->file, PATHINFO_EXTENSION) == "mp3")
-                <source src="{{$track->file}}" type="audio/mp3">
+              @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "mp3")
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/mp3">
               @endif
             </audio>
 
@@ -38,7 +38,7 @@ use Carbon\Carbon;
               </th>
               <td>{{$track->name}}</td>
               <td>{{$track->duration}}</td>
-              <td><label class="letra">Letra</label></td>
+              <td> <label class="letra"><a href="{{url('letra/'.$track->slug)}}"> Letra </a></label> </td>
             </tr>
         @endforeach
       </tbody>
@@ -84,7 +84,11 @@ use Carbon\Carbon;
        Edição e distribuição digital: Omnichord Records<br>
        Apoios: Fundação GDA e Câmara Municipal do Fundão<br>
      </p>
-              </div>
+    </div>
+
+    <footer class="row">
+    @include('layouts.footer')
+</footer>
 </div>
 
 @endsection
