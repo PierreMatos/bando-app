@@ -55,7 +55,7 @@ class CriaturaSeeder extends Seeder
         ]);
 
         DB::table('criaturas')->insert([
-            'slug' => "iurioliveira",
+            'slug' => "acaciobarbosa",
             'name' => "Acácio Barbosa",
             'description' => 'Guitarra portuguesa',
             'bio' => 'bio',
@@ -113,5 +113,6 @@ class CriaturaSeeder extends Seeder
             'image' => '/storage/uploads/cantinho.png',
             'link' => 'https://www.instagram.com/fabiocantinho/',
         ]);
+
     }
 }
