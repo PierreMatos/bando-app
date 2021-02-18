@@ -17,6 +17,11 @@
     </div>
   </div>
 
+
+  @comments(['model' => $criatura])
+
+
+
 </div>
 <div class="container mt-5">
     <div class="row d-flex justify-content-center">

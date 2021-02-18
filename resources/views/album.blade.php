@@ -18,7 +18,6 @@ use Carbon\Carbon;
         </div>
     </div>
 
-
     <table class="table table-album" style="margin-top:25px">
       <tbody>
         @foreach ($tracks as $track)
