@@ -49,3 +49,5 @@ Route::resource('guests', App\Http\Controllers\API\GuestAPIController::class);
 
 
 Route::resource('albums', App\Http\Controllers\API\AlbumAPIController::class);
+
+Route::resource('criaturas', App\Http\Controllers\API\CriaturaAPIController::class);
