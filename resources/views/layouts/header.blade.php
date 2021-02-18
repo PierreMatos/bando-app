@@ -5,7 +5,7 @@
     <title>{{ config('app.name') }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
-    <!-- APP CSS -->    
+    <!-- APP CSS -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css" >
 
     <!-- Font Awesome -->
@@ -15,7 +15,7 @@
 
     <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
           rel="stylesheet">
-          
+
     <!-- AdminLTE -->
     {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/3.0.5/css/adminlte.min.css"
           integrity="sha512-rVZC4rf0Piwtw/LsgwXxKXzWq3L0P6atiQKBNuXYRbg2FoRbSTIY0k2DxuJcs7dk4e/ShtMzglHKBOJxW8EQyQ=="
@@ -46,10 +46,10 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
 
         <img src="/storage/uploads/titulo.png"
-                             class="mx-auto d-block"
+                             class="mx-auto d-block img-fluid"
                              alt="Header Image">
 
-                             
+
         <ul class="navbar-nav">
             <li class="nav-item dropdown user-menu">
                 {{-- <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
@@ -65,17 +65,17 @@
                              alt="User Image">
                         <p>
                             {{ Auth::user()->name }} --}}
-                            
+
                             {{-- <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small> --}}
                         {{-- </p>
                     </li> --}}
                     <!-- Menu Footer-->
                     {{-- <li class="user-footer"> --}}
                         {{-- <a href="#" class="btn btn-default btn-flat">Profile</a> --}}
-                        
+
                     {{-- </li> --}}
                 {{-- </ul>--}}
-            </li> 
+            </li>
         </ul>
     </nav>
 
@@ -91,14 +91,14 @@
                   <li>
                   <a href="#"
                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                            Sair 
+                            Sair
                         </a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                             @csrf
                         </form>
                   @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
                   <li><a href="home">BACKOFFICE</a></li>
-                  @endif  
+                  @endif
                 </ul>
               </div>
 

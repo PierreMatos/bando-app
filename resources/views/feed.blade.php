@@ -36,7 +36,7 @@ use Carbon\Carbon;
                         <div class="card-body">
                             <div class="left70">
                               <h5 class="card-title">{{ $post->name }}</h5>
-                              <span> em lançamento exclusivo</span>
+                              <span>2021</span>
                             </div>
                             <div class="right30">
                                 <label class="album">Album</label>

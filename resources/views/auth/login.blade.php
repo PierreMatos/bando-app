@@ -37,7 +37,7 @@
 <div class="login-box">
     <div class="login-logo">
         {{-- <a href="{{ url('/home') }}"><b>{{ config('app.name') }}</b></a> --}}
-        
+
         <!-- /.login-logo -->
         <img src="/storage/uploads/titulo.png"
         class="mx-auto d-block"
@@ -81,12 +81,12 @@
 
                 </div>
 
-                
+
 
                 {{-- <div class="row"> --}}
-                    {{-- <div class="col-8 mx-auto d-block" > --}}
+                    {{-- <div class="col-12 center" > --}}
                         {{-- <input type="submit" class="btn text-nowrap class" id=play> --}}
-                        <button type="submit" class="btn mt-2 mb-5" id=play></button>
+                              <button type="submit" class="btn" id=play></button>
                         {{-- <div class="container"> --}}
                             {{-- <img src="http://127.0.0.1:8000/storage/css/Polygon 1.png"alt="Snow">
                             <button class="btn">Button</button> --}}
@@ -95,8 +95,8 @@
                 </div> --}}
 
                 <div class="row mt-4">
-                    {{-- <div class="col-8"> --}}
-                        <div class="icheck-primary mr-4">
+                    {{-- <div class="w100"> --}}
+                        <div class="icheck-primary w100 mb-2">
                             <input type="checkbox" id="remember" >
                             <label for="remember">Lembrar</label>
                         </div>
@@ -110,10 +110,10 @@
 
                     {{-- </div> --}}
                 </div>
-                
+
             </form>
 
-           
+
         </div>
     </div>
 

@@ -26,11 +26,20 @@ use App\Http\Controllers\TrackController;
 
 Auth::routes();
 
-//Only logged users can download assets 
+//Only logged users can download assets
 Route::get('/assets/{cat}/{filename}', [ FileController::class, 'file'])->name('get.file')->middleware(['auth']);
 
 Route::middleware(['auth'])->group(function()
     {
+      Route::get('/criatura', function () {
+           return view('criatura');
+     });
+
+     Route::get('/contatos', function () {
+          return view('contatos');
+    });
+
+
 
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
@@ -38,7 +47,7 @@ Route::middleware(['auth'])->group(function()
         Route::get('/album/{album}', [ AlbumController::class, 'showAlbum'])->name('album');
         Route::get('/letra/{slug}', [ TrackController::class, 'showTrackWithRelated'])->name('letra');
 
-        
+
         Route::get('/sendemail', 'SendEmailController@index');
         Route::post('/sendemail/send', 'SendEmailController@send');
 
@@ -46,7 +55,7 @@ Route::middleware(['auth'])->group(function()
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
 
 
-        
+
         Route::resource('postTypes', App\Http\Controllers\PostTypeController::class);
 
         Route::resource('posts', App\Http\Controllers\PostController::class);
@@ -88,4 +97,3 @@ Route::get('/home', [
 //     'generator_builder/generate-from-file',
 //     '\InfyOm\GeneratorBuilder\Controllers\GeneratorBuilderController@generateFromFile'
 // )->name('io_generator_builder_generate_from_file');
-
