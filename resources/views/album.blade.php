@@ -84,7 +84,10 @@ use Carbon\Carbon;
        Edição e distribuição digital: Omnichord Records<br>
        Apoios: Fundação GDA e Câmara Municipal do Fundão<br>
      </p>
+
     </div>
+
+    @comments(['model' => $album])
 
     <footer class="row">
     @include('layouts.footer')

@@ -5,25 +5,27 @@ namespace App\Models;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Laravelista\Comments\Commentable;
 
 /**
- * Class Album
+ * Class Criatura
  * @package App\Models
- * @version February 16, 2021, 9:37 am UTC
+ * @version February 17, 2021, 11:39 pm UTC
  *
  * @property string $slug
  * @property string $name
  * @property string $description
+ * @property string $bio
  * @property string $file
  * @property string $image
- * @property string $release_date
+ * @property string $link
  */
-class Album extends Model
+class Criatura extends Model
 {
-    use SoftDeletes, Commentable, HasFactory;
+    use SoftDeletes;
 
-    public $table = 'albums';
+    use HasFactory;
+
+    public $table = 'criaturas';
     
 
     protected $dates = ['deleted_at'];
@@ -34,9 +36,10 @@ class Album extends Model
         'slug',
         'name',
         'description',
+        'bio',
         'file',
         'image',
-        'release_date'
+        'link'
     ];
 
     /**
@@ -50,7 +53,8 @@ class Album extends Model
         'name' => 'string',
         'description' => 'string',
         'file' => 'string',
-        'image' => 'string'
+        'image' => 'string',
+        'link' => 'string'
     ];
 
     /**
@@ -60,17 +64,9 @@ class Album extends Model
      */
     public static $rules = [
         'name' => 'required',
-        'description' => 'required'
+        'description' => 'required',
+        'bio' => 'required'
     ];
 
-        /**
-     * Get the route key for the model.
-     *
-     * @return string
-     */
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
     
 }

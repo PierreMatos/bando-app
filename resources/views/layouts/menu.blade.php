@@ -1,32 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <li class="nav-item">
     <a href="{{ route('postTypes.index') }}"
        class="nav-link {{ Request::is('postTypes*') ? 'active' : '' }}">
@@ -68,9 +39,9 @@
 
 
 <li class="nav-item">
-    <a href="{{ route('tracks.index') }}"
-       class="nav-link {{ Request::is('tracks*') ? 'active' : '' }}">
-        <p>Tracks</p>
+    <a href="{{ route('users.index') }}"
+       class="nav-link {{ Request::is('users*') ? 'active' : '' }}">
+        <p>Users</p>
     </a>
 </li>
 
@@ -84,5 +55,13 @@
         <p>Albums</p>
     </a>
 </li>
+
+
+{{-- <li class="nav-item">
+    <a href="{{ route('criaturas.index') }}"
+       class="nav-link {{ Request::is('criaturas*') ? 'active' : '' }}">
+        <p>Criaturas</p>
+    </a>
+</li> --}}
 
 

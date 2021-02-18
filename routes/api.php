@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(array('prefix' => 'api/v1'), function()
 {
-    Route::resource('pages', 'PagesController', array('only' => array('index', 'store', 'show', 'update', 'destroy')));
-    Route::resource('posts', 'API/PostAPIController');
+    // Route::resource('pages', 'PagesController', array('only' => array('index', 'store', 'show', 'update', 'destroy')));
+    // Route::resource('posts', 'API/PostAPIController');
 });
 
 Route::resource('post_types', App\Http\Controllers\API\PostTypeAPIController::class);
@@ -49,3 +49,5 @@ Route::resource('guests', App\Http\Controllers\API\GuestAPIController::class);
 
 
 Route::resource('albums', App\Http\Controllers\API\AlbumAPIController::class);
+
+Route::resource('criaturas', App\Http\Controllers\API\CriaturaAPIController::class);

@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateAlbumRequest;
 use App\Repositories\AlbumRepository;
 use App\Repositories\TrackRepository;
 use App\Http\Controllers\AppBaseController;
+use App\Models\Album;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
@@ -184,10 +185,11 @@ class AlbumController extends AppBaseController
      *
      * @return Response
      */
-    public function showAlbum($album)
+    public function showAlbum($slug)
     {
         // TODO No create preencher campo slug
-        $album = DB::table('albums')->where('slug', $album)->get()->first();
+        // $album = new Album(DB::table('albums')->where('slug', $album)->get()->first());
+        $album = $this->albumRepository->findBy('slug', $slug)->first();
 
         $tracks = DB::table('track')->where('album_id', 1)->get();
 

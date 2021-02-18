@@ -5,25 +5,25 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Album Details</h1>
+                    <h1>user Details</h1>
                 </div>
                 <div class="col-sm-6">
                     <a class="btn btn-default float-right"
-                       href="{{ route('albums.index') }}">
+                       href="{{ route('users.index') }}">
                         Back
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    @comments(['model' => $album])
+    @comments(['model' => $user])
 
     <div class="content px-3">
         <div class="card">
 
             <div class="card-body">
                 <div class="row">
-                    @include('albums.show_fields')
+                    @include('users.show_fields')
                 </div>
             </div>
 

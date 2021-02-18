@@ -61,6 +61,8 @@ Route::middleware(['auth'])->group(function()
 
         Route::resource('albums', App\Http\Controllers\AlbumController::class);
 
+        Route::resource('users', App\Http\Controllers\UserController::class);
+
     });
 
 

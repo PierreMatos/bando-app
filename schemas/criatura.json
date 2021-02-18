@@ -1,0 +1,81 @@
+[
+    {
+        "name": "id",
+        "dbType": "increments",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "name": "slug",
+        "dbType": "string",
+        "htmlType": "",
+        "validations": "",
+        "searchable": true,
+        "inForm": false,
+        "inView": false
+    },
+    {
+        "name": "name",
+        "dbType": "string",
+        "htmlType": "text",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "description",
+        "dbType": "string",
+        "htmlType": "longtext",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "bio",
+        "dbType": "longText",
+        "htmlType": "longtext",
+        "validations": "required",
+        "searchable": true
+    },
+    {
+        "name": "file",
+        "dbType": "string",
+        "htmlType": "file"
+    },
+    {
+        "name": "image",
+        "dbType": "string",
+        "htmlType": "file"
+    },
+    {
+        "name": "link",
+        "dbType": "string",
+        "htmlType": "file"
+    },
+    {
+        "name": "created_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "timestamp",
+        "htmlType": "",
+        "validations": "",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false
+    }
+]
