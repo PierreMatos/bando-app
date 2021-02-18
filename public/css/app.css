@@ -10947,6 +10947,8 @@ a.text-dark:focus {
 #background {
   background-image: url("/storage/uploads/fundi.jpg");
   background-repeat: repeat;
+  min-height: 100vh;
+  padding-bottom: 5vh;
 }
 
 #play {
@@ -11204,7 +11206,7 @@ label {
   border: 2px solid grey;
 }
 
-.form-pao-pedra form button {
+form button {
   background: none;
   border: none;
   padding-top: 10px;
@@ -11291,7 +11293,6 @@ button.btn-pause :active {
 
 .letra a {
   color: #000000;
-  cursor: inherit;
 }
 
 .letra-show p {
@@ -11450,5 +11451,11 @@ a.btncard {
 .reply small:hover {
   color: green;
   cursor: pointer;
+}
+
+.info-txt {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
