@@ -153,4 +153,26 @@ class CriaturaController extends AppBaseController
 
         return redirect(route('criaturas.index'));
     }
+
+    /**
+     * Display a Criatura in front end
+     *
+     * @param Request $request
+     *
+     * @return Response
+     */
+    public function showCriatura($slug)
+    {
+
+        $criatura = $this->criaturaRepository->findBy('slug', $slug)->first();
+
+        if (empty($criatura)) {
+            Flash::error('Criatura not found');
+
+            return redirect(route('/'));
+        }
+
+        return view('criatura')
+            ->with('criatura', $criatura);
+    }
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\TrackController;
+use App\Http\Controllers\CriaturaController;
 use Illuminate\Support\Facades\Artisan;
 
 /*
@@ -38,8 +39,9 @@ Route::middleware(['auth'])->group(function()
         Route::get('/', [ PostController::class, 'feedPosts'])->name('feedposts');
         Route::get('/bembonda', [ PostController::class, 'album'])->name('bembonda');
 
-        Route::get('/album/{album}', [ AlbumController::class, 'showAlbum'])->name('album');
+        Route::get('/album/{slug}', [ AlbumController::class, 'showAlbum'])->name('album');
         Route::get('/letra/{slug}', [ TrackController::class, 'showTrackWithRelated'])->name('letra');
+        Route::get('/criatura/{slug}', [ CriaturaController::class, 'showCriatura'])->name('criatura');
 
         
         Route::get('/sendemail', 'SendEmailController@index');

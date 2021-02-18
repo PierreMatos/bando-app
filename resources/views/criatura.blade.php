@@ -6,23 +6,14 @@
   <div class="row  criatura-info">
     <div class="col-xs-12 col-md-6 p-4 order-md-1 order-2 bg-light">
       <p>
-          Nascido a 19/02/91, iniciou os seus estudos musicais com dez anos de idade na
-          Banda Filarmónica dos bombeiros voluntários de Aljezur com 10 anos de idade.
-          Por volta dos 13 anos iniciou os estudos na Academia de Música de Lagos, com o
-          instrumento trompete. Aos 17 estudou no curso profissional de instrumentos de
-          sopro e percussão, na ESPAMOL em lagoa. Em 2010 ingressou na Orquestra de
-          Jazz de Lagos, actual Orquestra de Jazz do Algarve, onde participou no projecto
-          durante 5 anos.
+         {{$criatura->bio}}
         </p>
-        <p>
-        Na actualidade Cláudio participa nos seguintes projecto: Os Compotas, Criatura,
-        Cambada Pistowski, Carapaus Afrobeat, El Trance del Mimo.
-        </p>
+
     </div>
     <div class="col-xs-12 col-md-6 p-3 info-criatura order-md-2 order-1">
-      <img src="/storage/uploads/claudio_no_bck.png" class="img-fluid" />
-      <h1 class="mt-2">Cláudio Gomes</h1>
-      <h2>Trompete / Vozes</h2>
+      <img src="{{$criatura->image}}" class="img-fluid" />
+      <h1 class="mt-2">{{$criatura->name}}</h1>
+      <h2>{{$criatura->description}}</h2>
     </div>
   </div>
 
