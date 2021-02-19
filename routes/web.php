@@ -9,6 +9,7 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\TrackController;
 use App\Http\Controllers\CriaturaController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
 
 /*
@@ -64,6 +65,7 @@ Route::middleware(['auth'])->group(function()
         Route::resource('albums', App\Http\Controllers\AlbumController::class);
 
         Route::resource('users', App\Http\Controllers\UserController::class);
+        Route::post('/profile', [ UserController::class, 'update_avatar'])->name('profile');
 
     });
 

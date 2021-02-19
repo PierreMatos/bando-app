@@ -67,9 +67,24 @@
                           <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                               <!-- User image -->
                               <li class="user-header w-100 p-0 m-0">
-                                <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
-                                       class="img-circle elevation-2 img-fluid mx-auto"
-                                       alt="User Image" width="75">
+                                {{-- <form action="/profile" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    <div class="image-upload">
+                                        <label for="file-input">
+                                            <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+                                            class="img-circle elevation-2 img-fluid mx-auto"
+                                            alt="User Image" width="75">
+                                        </label>
+                                      
+                                        <input id="file-input" type="file" style="display: none"/>
+                                      </div>
+
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form> --}}
+                                <img src="{{url(Auth::user()->avatar)}}"
+                                class="img-circle elevation-2 img-fluid mx-auto"
+                                            alt="User Image" width="75">
+                                
 
                                       {{-- <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small> --}}
 

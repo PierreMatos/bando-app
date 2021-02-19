@@ -5,6 +5,8 @@ namespace App\Models;
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Laravelista\Comments\Commentable;
+
 
 /**
  * Class Track
@@ -23,9 +25,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  */
 class Track extends Model
 {
-    use SoftDeletes;
-
-    use HasFactory;
+    use SoftDeletes, Commentable, HasFactory;
 
     public $table = 'track';
     
