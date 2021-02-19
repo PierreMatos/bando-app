@@ -100,11 +100,11 @@ Route::middleware(['auth'])->group(function()
             return '<h1>Clear Config cleared</h1>';
         });
 
-        Route::get('/updateapp', function()
-        {
-            Artisan::call('dump-autoload');
-            echo 'dump-autoload complete';
-        });
+        // Route::get('/updateapp', function()
+        // {
+        //     Artisan::call('dump-autoload');
+        //     echo 'dump-autoload complete';
+        // });
 
     });
 
