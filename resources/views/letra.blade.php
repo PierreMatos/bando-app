@@ -24,7 +24,7 @@ use Carbon\Carbon;
             <h5>{{$album->name}}</h5>
             <span>CRIATURA</span>
             <label class="letra">Letra</label>
-              <a href="/album/{{$album->name}}" target="_blank">Ver Álbum</a>
+              <a href="/album/{{$album->slug}}" target="_blank">Ver Álbum</a>
             <audio class="musicplayer" controls></audio>
         </div>
     </div>

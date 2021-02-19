@@ -10,7 +10,7 @@
           <div class="card pt-2 pl-2 pr-2">
             <div class="row m-4 p-0">
               <div class="col-2 col-md-1 avatar-comment m-0 p-0">
-                 <img src="https://www.gravatar.com/avatar/{{ md5($comment->commenter->email ?? $comment->guest_email) }}.jpg?s=64" class="img-fluid">
+                 <img src="{{ url(Auth::user()->avatar) }}" class="img-fluid">
               </div>
               <div class="col-10 col-md-11 info-comment pb-4">
                   <small class="font-weight-bold">{{ $comment->commenter->name ?? $comment->guest_name }}</small> | <small> {{ $comment->created_at->diffForHumans() }}</small><br>
