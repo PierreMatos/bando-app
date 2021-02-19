@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row mt-4 order-2">
     <div class="card-body text-center mr-2 ml-2">
         @if($errors->has('commentable_type'))
             <div class="alert alert-dark" role="alert">
@@ -19,7 +19,7 @@
             {{-- Guest commenting --}}
             @if(isset($guest_commenting) and $guest_commenting == true)
                 <div class="form-group">
-                      <h6 class="h6">Partilha algo com o Bando</h6>
+                      <h6 class="h3">Partilha algo com o Bando</h6>
                     <input type="text" class="form-control @if($errors->has('guest_name')) is-invalid @endif" name="guest_name" />
                     @error('guest_name')
                         <div class="invalid-feedback">
@@ -28,7 +28,7 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <h6 class="h6">Partilha algo com o Bando</h6>
+                    <h6 class="h3">Partilha algo com o Bando</h6>
                     <input type="email" class="form-control @if($errors->has('guest_email')) is-invalid @endif" name="guest_email" />
                     @error('guest_email')
                         <div class="invalid-feedback">
@@ -40,7 +40,7 @@
 
             <div class="container ">
               <div class="row mb-4">
-                <h6 class="h6"><strong>Partilha algo com o Bando</strong></h6>
+                <h6 class="h3"><strong>Partilha algo com o Bando</strong></h6>
                 <textarea class="form-control  form-control-lg @if($errors->has('message')) is-invalid @endif" name="message" rows="3" cols="75"></textarea>
 
                 <button type="submit" class="btn btn-dark m-3">

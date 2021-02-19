@@ -541,3 +541,19 @@ a.btncard{
 .info-comment span{
   font-size: large;
 }
+
+.alert.alert-warning {
+    display: none;
+}
+
+.absolute-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.user-mobile a {
+    display: contents;
+}
+
+a{color: black!important;}

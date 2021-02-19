@@ -4,8 +4,8 @@
     $markdown->setSafeMode(true);
 @endphp
 
-<div class="media container mt-3" id="comment-{{ $comment->getKey() }}" >
-  <div class="row d-flex justify-content-center w100">
+<div class="col-12 mt-4 order-1" id="comment-{{ $comment->getKey() }}" >
+  <div class="row">
       <div class="col-md-12 m-0 p-0">
           <div class="card pt-2 pl-2 pr-2">
             <div class="row m-4 p-0">
@@ -51,17 +51,16 @@
                             <div class="modal-header">
                                 <h5 class="modal-title">Editar comentário</h5>
                                 <button type="button" class="close" data-dismiss="modal">
-                                <span>&times;</span>
+                                    <img src="/storage/uploads/icon_close.png" width="31">
                                 </button>
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="message">@lang('comments::comments.update_your_message_here')</label>
                                     <textarea required class="form-control" name="message" rows="3">{{ $comment->comment }}</textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-sm btn-outline-success text-uppercase">@lang('comments::comments.update')</button>
+                                <button type="submit" class="btn btn-sm text-uppercase">Atualizar</button>
                             </div>
                         </form>
                     </div>
@@ -83,14 +82,13 @@
                             </div>
                             <div class="modal-body">
                                 <div class="form-group">
-                                    <label for="message">@lang('comments::comments.enter_your_message_here')</label>
                                     <textarea required class="form-control" name="message" rows="3"></textarea>
                                     <small class="form-text text-muted">@lang('comments::comments.markdown_cheatsheet', ['url' => 'https://help.github.com/articles/basic-writing-and-formatting-syntax'])</small>
                                 </div>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-sm btn-outline-secondary text-uppercase" data-dismiss="modal">@lang('comments::comments.cancel')</button>
-                                <button type="submit" class="btn btn-sm btn-outline-success text-uppercase">@lang('comments::comments.reply')</button>
+                                <button type="submit" class="btn btn-sm text-uppercase">@lang('comments::comments.reply')</button>
                             </div>
                         </form>
                     </div>

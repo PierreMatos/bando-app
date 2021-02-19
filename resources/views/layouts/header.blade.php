@@ -52,17 +52,47 @@
             <li><a href="/">Bando</a></li>
             <li><a href="/album/bembonda">Bem Bonda</a></li>
             <li><a href="/pedrapao">Pedra-Pão</a></li>
+
             <li>
-            <a href="#"
-                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                      Sair
-                  </a></li>
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                      @csrf
-                  </form>
-            @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
-            <li><a href="home">BACKOFFICE</a></li>
-            @endif
+              <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                  <ul class="navbar-nav ml-auto">
+                      <li class="nav-item dropdown user-menu">
+                          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+                              {{-- <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+                                   class="user-image img-circle elevation-2" alt="User Image"> --}}
+                              <span class="d-none d-md-inline">
+                                {{ Auth::user()->name }}
+                              </span>
+                          </a>
+                          <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                              <!-- User image -->
+                              <li class="user-header w-100 p-0 m-0">
+                                <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+                                       class="img-circle elevation-2 img-fluid mx-auto"
+                                       alt="User Image" width="75">
+
+                                      {{-- <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small> --}}
+
+                              </li>
+                              <!-- Menu Footer-->
+                              <li class="user-footer row text-center p-0 m-0">
+                                  @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
+                                  <a class="col-12 btn p-0 m-0" href="home">Backoffice</a>
+                                  @endif
+                                  <a href="#" class="col-12 btn p-0 m-0"
+                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                      Sair
+                                  </a>
+
+                                  <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                      @csrf
+                                  </form>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </nav>
+            </li>
           </ul>
         </div>
     </nav>
@@ -101,18 +131,26 @@
     <li><a href="/">Bando</a></li>
     <li><a href="/album/bembonda">Bem Bonda</a></li>
     <li><a href="/pedrapao">Pedra-Pão</a></li>
-    <li>
-    <a href="#"
-             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-              Sair
-          </a></li>
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-              @csrf
-          </form>
-    @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
-    <li><a href="home">BACKOFFICE</a></li>
-    @endif
+
   </ul>
+  <div class="absolute-bottom row" onclick="closemenu()">
+    <div class="col-5 mb-2">
+      <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+             class="img-circle elevation-2 img-fluid mx-auto mr-2 "
+             alt="User Image" width="50">
+
+        {{ Auth::user()->name }}
+    </div>
+    <div class="col-7 user-mobile pt-2">
+      @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
+      <a href="home" class="mr-2 ml-2 m-2" >Backoffice</a>
+      @endif
+      <a href="#" class="mr-2 ml-2 m-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+          Sair
+      </a>
+
+    </div>
+  </div>
 </div>
 <script type="text/javascript">
   function openmenu(){
@@ -122,6 +160,7 @@
 function closemenu(){
   document.getElementById('mobile-menu').style.display = "none";
 }
+
 </script>
 </body>
 </html>
