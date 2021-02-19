@@ -68,16 +68,18 @@
     </nav>
 
     <nav class="d-block d-sm-none main-header navbar-white navbar-light">
-
-        <img src="/storage/uploads/titulo.png" class="img-fluid" alt="Header Image">
-<div class="btn-navbar">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-</div>
-
-
-
+      <div class="container">
+           <div class="row">
+             <div class="col-10 navbar-left m-0 p-0">
+               <img src="/storage/uploads/titulo.png" class="img-fluid navbar-nav navbar-left" alt="Header Image">
+             </div>
+             <div class="col-2 navbar-right m-0 p-0 mt-5">
+               <button onclick="openmenu()" class="navbar-toggler navbar-nav navbar-right" type="button">
+                 <span class="navbar-toggler-icon"></span>
+               </button>
+             </div>
+           </div>
+         </div>
     </nav>
 
     <!-- Content Wrapper. Contains page content -->
@@ -91,5 +93,35 @@
 
     {{-- </div> --}}
 </div>
+<div class="menu-mobile" id="mobile-menu">
+  <div class="d-block w100 text-right p-4 mt-3 mr-3" onclick="closemenu()">
+    <img src="/storage/uploads/icon_close.png" / width="31" />
+  </div>
+  <ul class="m-0 p-0">
+    <li><a href="/">Bando</a></li>
+    <li><a href="/album/bembonda">Bem Bonda</a></li>
+    <li><a href="/pedrapao">Pedra-Pão</a></li>
+    <li>
+    <a href="#"
+             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              Sair
+          </a></li>
+          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+          </form>
+    @if ( Auth::user()->email == 'management@soulsistar.com' || Auth::user()->email == 'info@remotepartner.co')
+    <li><a href="home">BACKOFFICE</a></li>
+    @endif
+  </ul>
+</div>
+<script type="text/javascript">
+  function openmenu(){
+    document.getElementById('mobile-menu').style.display = "block";
+  }
+
+function closemenu(){
+  document.getElementById('mobile-menu').style.display = "none";
+}
+</script>
 </body>
 </html>

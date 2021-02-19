@@ -19,7 +19,7 @@
             {{-- Guest commenting --}}
             @if(isset($guest_commenting) and $guest_commenting == true)
                 <div class="form-group">
-                    <label for="message">@lang('comments::comments.enter_your_name_here')</label>
+                      <h6 class="h6">Partilha algo com o Bando</h6>
                     <input type="text" class="form-control @if($errors->has('guest_name')) is-invalid @endif" name="guest_name" />
                     @error('guest_name')
                         <div class="invalid-feedback">
@@ -28,7 +28,7 @@
                     @enderror
                 </div>
                 <div class="form-group">
-                    <label for="message">@lang('comments::comments.enter_your_email_here')</label>
+                    <h6 class="h6">Partilha algo com o Bando</h6>
                     <input type="email" class="form-control @if($errors->has('guest_email')) is-invalid @endif" name="guest_email" />
                     @error('guest_email')
                         <div class="invalid-feedback">
@@ -40,11 +40,9 @@
 
             <div class="container ">
               <div class="row mb-4">
-                <label for="message"><strong>@lang('comments::comments.enter_your_message_here')</strong></label>
+                <h6 class="h6"><strong>Partilha algo com o Bando</strong></h6>
                 <textarea class="form-control  form-control-lg @if($errors->has('message')) is-invalid @endif" name="message" rows="3" cols="75"></textarea>
-                <div class="invalid-feedback">
-                    @lang('comments::comments.your_message_is_required')
-                </div>
+
                 <button type="submit" class="btn btn-dark m-3">
                   Enviar
                 </button>

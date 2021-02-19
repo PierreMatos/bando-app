@@ -37378,6 +37378,14 @@ function pausemusic(idmusic) {
   document.getElementById(refbtnpause).style.display = "none";
 }
 
+function openmenu() {
+  document.getElementById('mobile-menu').style.display = "block";
+}
+
+function closemenu() {
+  document.getElementById('mobile-menu').style.display = "none";
+}
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":

@@ -36,8 +36,6 @@ function playmusic(idmusic){
     }
   }
 
-
-
 }
 
 function pausemusic(idmusic){
