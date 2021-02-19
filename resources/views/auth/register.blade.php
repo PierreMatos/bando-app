@@ -100,22 +100,22 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-8">
+                <div class="row text-center">
+                    <div class="col-12 p-4">
                         <div class="icheck-primary">
                             <input type="checkbox" id="agreeTerms" name="terms" value="agree">
-                            <label for="agreeTerms">
-                                Li e aceito os <a href="#">termos</a>
+                            <label for="remember">
+                                Li e aceito os termos
                             </label>
                         </div>
                     </div>
-                    <div class="col-4">
-                    <a href="{{ route('login') }}" class="text-center">Já tenho conta</a>
+                    <div class="col-12">
+                    <a href="{{ route('login') }}" class="text-center text-dark" >Já tenho conta</a>
                     </div>
 
                     <!-- /.col -->
                 </div>
-                
+
                 <button type="submit" class="btn mt-4 mb-5" id=play></button>
             </form>
 

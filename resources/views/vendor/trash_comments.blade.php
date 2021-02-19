@@ -4,42 +4,27 @@
     $markdown->setSafeMode(true);
 @endphp
 
-<div class="media container mt-3" id="comment-{{ $comment->getKey() }}" >
-  <div class="row d-flex justify-content-center w100">
-      <div class="col-md-12 m-0 p-0">
-          <div class="card pt-2 pl-2 pr-2">
-            <div class="row m-4 p-0">
-              <div class="col-2 col-md-1 avatar-comment m-0 p-0">
-                 <img src="https://www.gravatar.com/avatar/{{ md5($comment->commenter->email ?? $comment->guest_email) }}.jpg?s=64" class="img-fluid">
-              </div>
-              <div class="col-10 col-md-11 info-comment pb-4">
-                  <small class="font-weight-bold">{{ $comment->commenter->name ?? $comment->guest_name }}</small> | <small> {{ $comment->created_at->diffForHumans() }}</small><br>
-                  <span>{!! $markdown->line($comment->comment) !!}</span>
-              </div>
-              <div class="col-12 edit-comment border-top pt-1">
-                  @can('reply-to-comment', $comment)
-                      <button data-toggle="modal" data-target="#reply-modal-{{ $comment->getKey() }}" class="btn btn-sm btn-link text-uppercase right">@lang('comments::comments.reply')</button>
-                  @endcan
+<div id="comment-{{ $comment->getKey() }}" class="media">
+    <img class="mr-3" src="https://www.gravatar.com/avatar/{{ md5($comment->commenter->email ?? $comment->guest_email) }}.jpg?s=64" alt="{{ $comment->commenter->name ?? $comment->guest_name }} Avatar">
+    <div class="media-body">
+        <h5 class="mt-0 mb-1">{{ $comment->commenter->name ?? $comment->guest_name }} <small class="text-muted">- {{ $comment->created_at->diffForHumans() }}</small></h5>
+        <div style="white-space: pre-wrap;">{!! $markdown->line($comment->comment) !!}</div>
 
-                  @can('delete-comment', $comment)
-                      <a href="{{ route('comments.destroy', $comment->getKey()) }}" onclick="event.preventDefault();document.getElementById('comment-delete-form-{{ $comment->getKey() }}').submit();" class="btn btn-sm btn-link text-danger text-uppercase"><img src="/storage/css/icon_trash.png" class="img-fluid m-1" width="20"/></a>
-                      <form id="comment-delete-form-{{ $comment->getKey() }}" action="{{ route('comments.destroy', $comment->getKey()) }}" method="POST" style="display: none;">
-                          @method('DELETE')
-                          @csrf
-                      </form>
-                  @endcan
-                  @can('edit-comment', $comment)
-                      <button data-toggle="modal" data-target="#comment-modal-{{ $comment->getKey() }}" class="btn btn-sm btn-link text-uppercase">
-                          <img src="/storage/css/icon_edit.png" class="img-fluid m-1" width="23"/>
-                      </button>
-                  @endcan
-              </div>
-            </div>
-          </div>
-
+        <div>
+            @can('reply-to-comment', $comment)
+                <button data-toggle="modal" data-target="#reply-modal-{{ $comment->getKey() }}" class="btn btn-sm btn-link text-uppercase">@lang('comments::comments.reply')</button>
+            @endcan
+            @can('edit-comment', $comment)
+                <button data-toggle="modal" data-target="#comment-modal-{{ $comment->getKey() }}" class="btn btn-sm btn-link text-uppercase">@lang('comments::comments.edit')</button>
+            @endcan
+            @can('delete-comment', $comment)
+                <a href="{{ route('comments.destroy', $comment->getKey()) }}" onclick="event.preventDefault();document.getElementById('comment-delete-form-{{ $comment->getKey() }}').submit();" class="btn btn-sm btn-link text-danger text-uppercase">@lang('comments::comments.delete')</a>
+                <form id="comment-delete-form-{{ $comment->getKey() }}" action="{{ route('comments.destroy', $comment->getKey()) }}" method="POST" style="display: none;">
+                    @method('DELETE')
+                    @csrf
+                </form>
+            @endcan
         </div>
-    </div>
-
 
         @can('edit-comment', $comment)
             <div class="modal fade" id="comment-modal-{{ $comment->getKey() }}" tabindex="-1" role="dialog">
@@ -122,7 +107,7 @@
         @endif
 
     </div>
-
+</div>
 
 {{-- Recursion for children --}}
 @if($grouped_comments->has($comment->getKey()) && $indentationLevel > $maxIndentationLevel)

@@ -11483,3 +11483,22 @@ a.btncard {
   color: black;
 }
 
+.edit-comment button {
+  float: right;
+}
+
+.edit-comment a {
+  float: right;
+}
+
+.play {
+  background-image: url("/storage/css/Polygon 1.png");
+  height: 55px;
+  width: 55px;
+  background-repeat: no-repeat;
+}
+
+.info-comment span {
+  font-size: large;
+}
+

@@ -46,12 +46,12 @@
 
     <div class="container">
         <div class="row">
-            <p class="login-box-msg text-center font-weight-bold">Entrar</p>
+            <p class="login-box-msg text-center font-weight-bold d-block w100">Entrar</p>
 
-            <form method="post" action="{{ url('/login') }}">
+            <form method="post" action="{{ url('/login') }}" class="w100">
                 @csrf
 
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 text-center">
                     <input type="email"
                            name="email"
                            value="{{ old('email') }}"
