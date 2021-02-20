@@ -5,14 +5,14 @@ use Carbon\Carbon;
 @extends('layouts.header')
 @section('content')
 
-    <audio id="{{$track->id}}">
+    {{-- <audio id="{{$track->id}}">
       @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "wav")
         <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
       @endif
       @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "mp3")
         <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/mp3">
       @endif
-    </audio>
+    </audio> --}}
 
 <div class="container bg-white">
     <div class="row header-album">
@@ -47,7 +47,7 @@ use Carbon\Carbon;
       @foreach($related as $track)
         <div class="col-md-3">
          {{-- TODO Change id to SLUG --}}
-          <a href="{{ $track->id }}">
+          <a href="{{ $track->slug }}">
             <img class="card-img-top" src="{{$album->image}}" alt="{{ $track->name }}" />
             <h5>{{$track->name}}</h5>
             <h4>{{$album->name}}</h4>
@@ -56,6 +56,11 @@ use Carbon\Carbon;
         </div>
       @endforeach
     </div>
+
+
+    <footer class="row">
+    @include('layouts.footer')
+</footer>
 </div>
 
 @endsection
