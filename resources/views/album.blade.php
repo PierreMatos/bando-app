@@ -95,8 +95,6 @@ use Carbon\Carbon;
     if (isset($approved) and $approved == true) {
         $comments = $model->approvedComments;
     } else {
-      dd($album);
-
         $comments = $model->comments;
     }
 ?>
