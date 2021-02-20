@@ -21,7 +21,7 @@ use Carbon\Carbon;
             <span>2021</span>
         </div>
         <div class="col-12 col-md-9 pt-5 order-md-2 order-1">
-            <h4>{{$track->name}}</h4>
+            <h1>{{$track->name}}</h1>
             <h5>{{$album->name}}</h5>
             <span>CRIATURA</span>
             <label class="letra">Letra</label>

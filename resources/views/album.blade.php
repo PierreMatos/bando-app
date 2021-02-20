@@ -11,7 +11,7 @@ use Carbon\Carbon;
                 <img class="card-img-top" src="{{$album->image}}" alt="{{ $album->name }}" />
         </div>
         <div class="col-12 col-md-9 mt-5 order-md-2 order-1">
-          <h4>{{$album->name}}</h4>
+          <h1>{{$album->name}}</h1>
           <h5>em lançamento exclusivo</h5>
           <label class="album">Álbum</label>
           <a href="{{ url('assets/album/'.$album->file)}}" target="_blank">Download aqui</a>
