@@ -4,14 +4,15 @@ use Carbon\Carbon;
 ?>
 @extends('layouts.header')
 @section('content')
-<audio id="{{$track->id}}">
-@if(pathinfo($track->file, PATHINFO_EXTENSION) == "wav")
-  <source src="{{$track->file}}" type="audio/wav">
-@endif
-@if(pathinfo($track->file, PATHINFO_EXTENSION) == "mp3")
-  <source src="{{$track->file}}" type="audio/mp3">
-@endif
-</audio>
+
+    <audio id="{{$track->id}}">
+      @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "wav")
+        <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
+      @endif
+      @if(pathinfo(url('assets/tracks/'.$track->file), PATHINFO_EXTENSION) == "mp3")
+        <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/mp3">
+      @endif
+    </audio>
 
 <div class="container bg-white">
     <div class="row header-album">
@@ -25,7 +26,15 @@ use Carbon\Carbon;
             <span>CRIATURA</span>
             <label class="letra">Letra</label>
               <a href="/album/{{$album->slug}}" target="_blank">Ver Álbum</a>
-            <audio class="musicplayer" controls></audio>
+            {{-- <audio class="musicplayer" controls></audio> --}}
+
+            <div class="w100">
+              <audio controls>
+                <source src="{{url('assets/tracks/'.$track->file)}}" type="audio/wav">
+                Your browser does not support the audio element.
+                </audio>
+            </div>
+
         </div>
     </div>
     <div class="row">

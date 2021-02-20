@@ -70,7 +70,7 @@ use Carbon\Carbon;
                             </div>
                             <div class="w100">
                               <audio controls>
-                                <source src="{{$post->link}}" type="audio/wav">
+                                <source src="{{url('assets/tracks/'.$post->link)}}" type="audio/wav">
                                 Your browser does not support the audio element.
                                 </audio>
                             </div>
