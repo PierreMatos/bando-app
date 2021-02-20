@@ -150,7 +150,7 @@
   </ul>
   <div class="absolute-bottom row" onclick="closemenu()">
     <div class="col-5 mb-2">
-      <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+      <img src="{{url(Auth::user()->avatar)}}"
              class="img-circle elevation-2 img-fluid mx-auto mr-2 "
              alt="User Image" width="50">
 

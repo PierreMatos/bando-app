@@ -177,7 +177,9 @@ class TrackController extends AppBaseController
     public function showTrackWithRelated($slug)
     {
         // $track = $this->trackRepository->find($id);
-        $track = DB::table('track')->where('slug', $slug)->get()->first();
+        // $track = DB::table('track')->where('slug', $slug)->get()->first();
+        $track = $this->trackRepository->findBy('slug', $slug)->first();
+
 
         $album = DB::table('albums')->where('id', $track->album_id)->get()->first();
         
