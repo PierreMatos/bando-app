@@ -47,7 +47,7 @@ use Carbon\Carbon;
       @foreach($related as $track)
         <div class="col-md-3">
          {{-- TODO Change id to SLUG --}}
-          <a href="{{ $track->slug }}">
+          <a href="{{$track->slug}}">
             <img class="card-img-top" src="{{$album->image}}" alt="{{ $track->name }}" />
             <h5>{{$track->name}}</h5>
             <h4>{{$album->name}}</h4>
