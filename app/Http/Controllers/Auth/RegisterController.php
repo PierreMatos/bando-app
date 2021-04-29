@@ -79,7 +79,7 @@ class RegisterController extends Controller
         ]);
     
         $orders = collect($shopifyClient->getOrders(['status'=>'any']));
-    
+
         $items = [];        
        
         foreach ($orders as $order){

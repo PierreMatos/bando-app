@@ -48,6 +48,7 @@ Route::middleware(['auth'])->group(function()
         Route::get('/sendemail', 'SendEmailController@index');
         Route::post('/sendemail/send', 'SendEmailController@send');
 
+        Route::get('/concerto', [ ContactController::class, 'concerto'])->name('concerto');
         Route::get('/pedrapao', [ ContactController::class, 'contact'])->name('pedrapao');
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
 

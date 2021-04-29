@@ -67,23 +67,38 @@
                           <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
                               <!-- User image -->
                               <li class="user-header w-100 p-0 m-0">
-                                {{-- <form action="/profile" method="post" enctype="multipart/form-data">
+                                <form action="/profile" method="post" enctype="multipart/form-data">
                                     @csrf
+                                    <input type="text" name="someName" id="someid" />
+
                                     <div class="image-upload">
-                                        <label for="file-input">
-                                            <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
-                                            class="img-circle elevation-2 img-fluid mx-auto"
+                                            <img src="{{url(Auth::user()->avatar)}}"
+                                            id="avatar"
+                                            class="rounded-circle img-circle elevation-2 img-fluid mx-auto"
                                             alt="User Image" width="75">
-                                        </label>
-                                      
-                                        <input id="file-input" type="file" style="display: none"/>
+
+                                            <label for="avatar">
+                                                <div class="gb_jb">
+                                                    <a class="gb_kb" for="avatar">
+                                                        <svg class="gb_lb" enable-background="new 0 0 24 24" focusable="false" height="26" viewBox="0 0 24 24" width="18" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M20 5h-3.17L15 3H9L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 14H4V7h16v12zM12 9c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </label>
+                                        {{-- <input id="file-input" type="file" style="display: none"/> --}}
+                                        <input id="avatar" type="file" style="display: none"
+                                        onchange="document.getElementById('avatar').src = window.URL.createObjectURL(this.files[0]);
+                                        document.getElementById('avatar-btn').style.display = 'block'"/>
                                       </div>
 
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                </form> --}}
-                                <img src="{{url(Auth::user()->avatar)}}"
-                                class="img-circle elevation-2 img-fluid mx-auto"
-                                            alt="User Image" width="75">
+                                      {{-- <img id="blah" alt="your image" width="100" height="100" /> --}}
+
+                                     
+
+                                    <button type="submit" class="btn btn-primary" id="avatar-btn" style="display: none">Submit</button>
+                                </form>
+                                {{-- <img src="{{url(Auth::user()->avatar)}}" --}}
+                                {{-- class="img-circle elevation-2 img-fluid mx-auto"
+                                            alt="User Image" width="75"> --}}
                                 
 
                                       {{-- <small>Member since {{ Auth::user()->created_at->format('M. Y') }}</small> --}}

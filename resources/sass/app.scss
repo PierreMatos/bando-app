@@ -133,6 +133,13 @@ h5{
   background-image:url('/storage/uploads/bck_warning.jpg');
 }
 
+.card-live{
+  background-size: cover;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-image:url('/storage/uploads/criatura_live.jpg');
+}
+
 .card-news{
   background-color:white;
 }
@@ -554,6 +561,38 @@ a.btncard{
 
 .user-mobile a {
     display: contents;
+}
+
+.image-upload {
+  position: relative;
+  height: 86px;
+  width: 86px;
+}
+
+.gb_kb{
+    bottom: 0;
+    -webkit-box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%), 0 1px 3px 1px rgb(65 69 73 / 15%);
+    box-shadow: 0 1px 1px 0 rgb(65 69 73 / 30%), 0 1px 3px 1px rgb(65 69 73 / 15%);
+    margin: 0 2.5px 3px;
+    outline: 0;
+    position: absolute;
+    right: 0;
+    height: 26px;
+    width: 26px;
+}
+
+.gb_jb {
+  background: #fff;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  overflow: visible;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  color: #5f6368;
+  cursor: pointer;
 }
 
 a{color: black!important;}

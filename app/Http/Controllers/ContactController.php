@@ -13,6 +13,10 @@ class ContactController extends AppBaseController
             return view('pedra-pao');
         }
 
+        public function concerto(){
+            return view('concerto');
+        }
+
         public function contactPost(Request $request){
 
 
