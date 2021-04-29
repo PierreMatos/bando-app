@@ -13,7 +13,7 @@ use Carbon\Carbon;
 
         <div class="row header-album">
           <div class="col-12 col-md-3 mt-3 text-center order-md-1 order-2">
-                  <img class="card-img-top" src="/storage/uploads/criatura_live.jpg" alt="concerto" />
+                  <img class="card-img-top" src="/storage/uploads/criatura_live2.jpg" alt="concerto" />
           </div>
           <div class="col-12 col-md-9 mt-5 order-md-2 order-1">
             <h1>Lançamento de "Bem Bonda" ao Vivo!</h1>

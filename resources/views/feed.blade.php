@@ -43,7 +43,7 @@ use Carbon\Carbon;
                 <div class="card-footer">
 
                   <div class="right">
-                    <small class="text-muted">  2min </small>
+                    {{-- <small class="text-muted">  2min </small> --}}
                   </div>
                 </div>
               </a>
