@@ -23,8 +23,7 @@ use Carbon\Carbon;
             <h5>Convite em 1ª mão para o Bando</h5>
             <label class="album">Concerto</label>
 
-            <div class="form-pao-pedra d-block mt-5">
-              {{-- <h4>Morada</h4> --}}
+            {{-- <div class="form-pao-pedra d-block mt-5">
               <form method="POST" action="/concerto">
                 <div class="form-row align-items-center">
                   <div class="col-auto">
@@ -36,9 +35,9 @@ use Carbon\Carbon;
                 </div>
                 </div>
               </form>
-            </div>
+            </div> --}}
 
-            {{-- <a href="https://www.bol.pt/Comprar/Bilhetes/95418-ciclo_mundos_criatura-teatro_da_trindade_inatel/" target="_blank">COMPRAR BILHETES</a> --}}
+            <a class="h3" href="https://www.bol.pt/Comprar/Bilhetes/95418-ciclo_mundos_criatura-teatro_da_trindade_inatel/" target="_blank">COMPRAR BILHETES</a>
           </div>
       </div>
 
@@ -48,7 +47,7 @@ use Carbon\Carbon;
           <p>Trazemos-vos a primeira comunicação exclusiva para o Bando! Uma notícia sobre a qual temos todo o gosto e alegria em vos fazermos chegar em primeiríssima mão. A data do concerto oficial de lançamento do “Bem Bonda”:
           </p>
           <p>Este concerto surge a convite do Ciclo Mundos, uma programação no Teatro da Trindade Inatel. Já tínhamos feito parte do Ciclo Mundos em 2016, aquando da tour do “Aurora” e foi para nós dos concertos mais bonitos que demos. Também não é para menos, o Teatro da Trindade Inatel não se poupa ao vislumbre! 
-          </p>
+          </p><br><br>
 
 {{-- 
           <p>
