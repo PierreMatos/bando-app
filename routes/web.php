@@ -51,6 +51,7 @@ Route::middleware(['auth'])->group(function()
         Route::get('/concerto', [ ContactController::class, 'concerto'])->name('concerto');
         Route::get('/pedrapao', [ ContactController::class, 'contact'])->name('pedrapao');
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
+        Route::post('/concerto', [ ContactController::class, 'concertoPost'])->name('concertoPost');
 
 
         Route::resource('postTypes', App\Http\Controllers\PostTypeController::class);

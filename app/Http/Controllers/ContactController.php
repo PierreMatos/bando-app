@@ -46,4 +46,34 @@ class ContactController extends AppBaseController
             return back()->with('success', 'Obrigado pela tua encomenda, entraremos em contacto brevemente.');
 
         }
+
+
+        public function concertoPost(Request $request){
+
+
+        //     $this->validate($request, [
+        //                     'rua' => 'required',
+        //                     'local' => 'required',
+        //                     'cod_postal' => 'required'
+        //             ]);
+
+        try{
+            Mail::send('email', [
+                    'email' => Auth::user()->email,
+                    'nome' => $request->get('nome') ],
+                    
+                    function ($message) {
+                            $message->from(Auth::user()->email);
+                            $message->cc('info@remotepartner.co');
+                            $message->cc('management@soulsistar.com');
+                            $message->to('bembonda@criaturamusic.com', 'Criatura')
+                            ->subject('Reserva Bilhete');
+            });
+        }catch(\Exception $e){
+            return back()->with("Erro, tenta novamente");
+                echo ("Erro, tenta novamente");
+            }
+            return back()->with('success', 'Obrigado pela tua reserva, entraremos em contacto brevemente.');
+
+        }
 }
