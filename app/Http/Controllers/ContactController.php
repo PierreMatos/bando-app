@@ -41,7 +41,8 @@ class ContactController extends AppBaseController
                             ->subject('Encomenda Pedra Pão');
             });
         }catch(\Exception $e){
-                echo ("Erro, tenta novamente");
+            return back()->with('error', 'Pedimos desculpa mas não foi possível efetuar a tua encomenda');
+
             }
             return back()->with('success', 'Obrigado pela tua encomenda, entraremos em contacto brevemente.');
 
@@ -58,7 +59,7 @@ class ContactController extends AppBaseController
         //             ]);
 
         try{
-            Mail::send('email', [
+            Mail::send('emailconcerto', [
                     'email' => Auth::user()->email,
                     'nome' => $request->get('nome') ],
                     
@@ -70,10 +71,11 @@ class ContactController extends AppBaseController
                             ->subject('Reserva Bilhete');
             });
         }catch(\Exception $e){
-            return back()->with("Erro, tenta novamente");
-                echo ("Erro, tenta novamente");
+            return back()->with('error', 'Pedimos desculpa mas não foi possível efetuar a tua reserva.');
+                // echo ("Erro, tenta novamente");
             }
-            return back()->with('success', 'Obrigado pela tua reserva, entraremos em contacto brevemente.');
+            return back()->with('success', 'Obrigado pela tua reserva,  entraremos em contacto brevemente.');
+            // return back()->with('success', 'Obrigado pela tua reserva, entraremos em contacto brevemente.');
 
         }
 }

@@ -4,6 +4,9 @@ use Carbon\Carbon;
 ?>
 @extends('layouts.header')
 @section('content')
+@include('alertmessage')
+
+
 
 
 <div class="container bg-white">
@@ -158,9 +161,9 @@ use Carbon\Carbon;
         </p> --}}
           
           </div>
-          <div class="footer-pao">
+          {{-- <div class="footer-pao">
             <img src="storage/uploads/footer-pedra-pao.jpg" class="img-fluid"/>
-          </div>
+          </div> --}}
 
 </div>
 

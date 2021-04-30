@@ -4,6 +4,7 @@ use Carbon\Carbon;
 ?>
 @extends('layouts.header')
 @section('content')
+@include('alertmessage')
 
 
 <div class="container bg-white">

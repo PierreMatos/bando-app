@@ -1,4 +1,4 @@
-<p><b>NOVA ENCOMENDA</b></p>
+<p><b>NOVA RESERVA</b></p>
 <br>
 <p>Nome: {{ $nome }}</p>
 <p>Email: {{ $email }}</p>
