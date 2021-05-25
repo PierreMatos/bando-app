@@ -27,6 +27,31 @@ use Carbon\Carbon;
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="card mr-0">
+                <a href="/esgotou" class="btncard">
+                  <img class="card-img-top" src="/storage/uploads/pUAhzIMLvIKGTPn9Hr3Q7VxJOmi7NjNIkw4eZ3ju.jpg" alt="BEM BONDA">
+                  <div class="card-body">
+                      <div class="left70">
+                        <h5 class="card-title">ESGOTOU!!!</h5>
+                        <span>25 Maio</span>
+                      </div>
+                      <div class="right30">
+                          <label class="album">Concerto</label>
+                      </div>
+                      <p class="card-text">Estão esgotados os dois concertos de 24 e 25 de Maio no Teatro da Trindade! Mas...</p>
+                  </div>
+
+                <div class="card-footer">
+
+                  <div class="right">
+                    {{-- <small class="text-muted">  2min </small> --}}
+                  </div>
+                </div>
+              </a>
+              </div>
+          </div>
+          
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <div class="card mr-0">
                 <a href="/concerto" class="btncard">
                   <img class="card-img-top" src="/storage/uploads/criatura_live2.jpg" alt="BEM BONDA">
                   <div class="card-body">
@@ -49,6 +74,9 @@ use Carbon\Carbon;
               </a>
               </div>
           </div>
+
+          
+           
 
             @foreach($posts as $post)
 
@@ -142,6 +170,7 @@ use Carbon\Carbon;
                 </div>
 
                 @endif
+
 
                 @if($post->type_id == 6)
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">

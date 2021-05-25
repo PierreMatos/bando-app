@@ -48,7 +48,14 @@ Route::middleware(['auth'])->group(function()
         Route::get('/sendemail', 'SendEmailController@index');
         Route::post('/sendemail/send', 'SendEmailController@send');
 
-        Route::get('/concerto', [ ContactController::class, 'concerto'])->name('concerto');
+        Route::get("/esgotou", function(){
+            return view('esgotou');
+         });
+        Route::get("/concerto", function(){
+            return view('concerto');
+         });
+
+        // Route::get('/concerto', [ ContactController::class, 'concerto'])->name('concerto');
         Route::get('/pedrapao', [ ContactController::class, 'contact'])->name('pedrapao');
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
         Route::post('/concerto', [ ContactController::class, 'concertoPost'])->name('concertoPost');
