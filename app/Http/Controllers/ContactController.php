@@ -3,18 +3,34 @@
 namespace App\Http\Controllers;
 use App\Http\Controllers\AppBaseController;
 
+use App\Repositories\PostRepository;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mail;
 
 class ContactController extends AppBaseController
 {
+
+    private $postRepository;
+    
+    public function __construct(PostRepository $postRepo)
+    {
+        $this->postRepository = $postRepo;
+
+    }
+
         public function contact(){
             return view('pedra-pao');
         }
 
-        public function concerto(){
-            return view('concerto');
+        public function concerto($id){
+
+        $post = $this->postRepository->find($id);
+
+        return view('concerto.3')
+                ->with('post', $post);
+
+
         }
 
         public function contactPost(Request $request){

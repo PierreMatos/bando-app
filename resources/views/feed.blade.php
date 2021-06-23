@@ -27,6 +27,7 @@ use Carbon\Carbon;
 
             <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
               <div class="card mr-0">
+<<<<<<< Updated upstream
                 <a href="/esgotou" class="btncard">
                   <img class="card-img-top" src="/storage/uploads/pUAhzIMLvIKGTPn9Hr3Q7VxJOmi7NjNIkw4eZ3ju.jpg" alt="BEM BONDA">
                   <div class="card-body">
@@ -54,15 +55,79 @@ use Carbon\Carbon;
               <div class="card mr-0">
                 <a href="/concerto" class="btncard">
                   <img class="card-img-top" src="/storage/uploads/criatura_live2.jpg" alt="BEM BONDA">
+=======
+                <a href="/concerto/3" class="btncard">
+                <div class="image-crop" style="overflow:hidden; height:300px; background-image:url(/storage/uploads/criatura-02.jpg);background-size: cover;
+    background-position: center;">
+                </div>
+>>>>>>> Stashed changes
                   <div class="card-body">
                       <div class="left70">
-                        <h5 class="card-title">"Bem Bonda" ao Vivo!</h5>
-                        <span>25 Maio</span>
+                        <h5 class="card-title mb-2">Festival Portas do Sol</h5>
+                        <!-- <span>25 Maio</span> -->
                       </div>
                       <div class="right30">
                           <label class="album">Concerto</label>
                       </div>
-                      <p class="card-text">Trazemos-vos a primeira comunicação exclusiva para o Bando! Uma notícia sobre a qual temos todo o gosto e alegria em vos fazermos chegar em primeiríssima mão. A data do concerto oficial de lançamento do “Bem Bonda”:</p>
+                      <p class="card-text" style="font-size: small; color: #B23939; font-weight: 700;">3 Julho . 23H - COVILHÃ </p>
+                  </div>
+
+                <div class="card-footer">
+
+                  <div class="right">
+                    {{-- <small class="text-muted">  2min </small> --}}
+                  </div>
+                </div>
+              </a>
+              </div>
+          </div>
+
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <div class="card mr-0">
+                <a href="/concerto/2" class="btncard">
+                  <div class="image-crop" style="overflow:hidden; height:300px; background-image:url(/storage/uploads/criatura-01-ps.jpg);background-size: cover;
+    background-position: center;">
+                    <!-- <img class="" src="/storage/uploads/criatura-01-ps.jpg" alt="BEM BONDA" style="margin:0 -50%;height: 100%;"> -->
+                  </div>
+
+                  <div class="card-body">
+
+                  <label class="album">Concerto</label>
+                        <h5 class="card-title mb-2">Festival Internacional de Gigantones</h5>
+                        <!-- <div class="left70"> -->
+                      <p class="card-text" style="font-size: small; color: #B23939; font-weight: 700;">4 Julho . 21H - PINHAL NOVO</p>
+
+                        <!-- <span>PINHAL NOVO - 4 Julho . 21H</span> -->
+                      <!-- </div> -->
+                        <!-- <p class="card-text">PINHAL NOVO</p> -->
+
+                  </div>
+
+                <div class="card-footer">
+
+                  <div class="right">
+                    {{-- <small class="text-muted">  2min </small> --}}
+                  </div>
+                </div>
+              </a>
+              </div>
+          </div>
+
+
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+              <div class="card mr-0">
+                <a href="/concerto/1" class="btncard">
+                  <img class="card-img-top" src="/storage/uploads/criatura_live2.jpg" alt="BEM BONDA">
+                  <div class="card-body">
+                  <label class="album">Concerto</label>
+                        <h5 class="card-title">"Bem Bonda" ao Vivo!</h5>
+
+                      <div class="left70">
+                        <span>25 Maio</span>
+                      </div>
+                  <p class="card-text">Trazemos-vos a primeira comunicação exclusiva para o Bando! Uma notícia sobre a qual temos todo o gosto e alegria em vos fazermos chegar em primeiríssima mão. A data do concerto oficial de lançamento do “Bem Bonda”:</p>
+                  
                   </div>
 
                 <div class="card-footer">

@@ -48,6 +48,7 @@ Route::middleware(['auth'])->group(function()
         Route::get('/sendemail', 'SendEmailController@index');
         Route::post('/sendemail/send', 'SendEmailController@send');
 
+<<<<<<< Updated upstream
         Route::get("/esgotou", function(){
             return view('esgotou');
          });
@@ -56,6 +57,9 @@ Route::middleware(['auth'])->group(function()
          });
 
         // Route::get('/concerto', [ ContactController::class, 'concerto'])->name('concerto');
+=======
+        Route::get('/concerto/{id}', [ ContactController::class, 'concerto'])->name('concerto');
+>>>>>>> Stashed changes
         Route::get('/pedrapao', [ ContactController::class, 'contact'])->name('pedrapao');
         Route::post('/pedrapao', [ ContactController::class, 'contactPost'])->name('contactPost');
         Route::post('/concerto', [ ContactController::class, 'concertoPost'])->name('concertoPost');
