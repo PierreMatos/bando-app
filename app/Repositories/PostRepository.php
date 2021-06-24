@@ -20,6 +20,7 @@ class PostRepository extends BaseRepository
         'name',
         'description',
         'link',
+        'order',
         'lyric'
     ];
 

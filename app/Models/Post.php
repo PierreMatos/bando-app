@@ -40,6 +40,7 @@ class Post extends Model
         'description',
         'link',
         'asset',
+        'order',
         'lyric',
         'type_id',
         'created_at'
@@ -55,6 +56,7 @@ class Post extends Model
         'name' => 'string',
         'description' => 'string',
         'link' => 'string',
+        'order' => 'integer',
         'asset' => 'string',
         'type_id' => 'integer',
         'created_at' => 'datetime'

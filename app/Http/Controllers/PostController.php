@@ -46,7 +46,7 @@ class PostController extends AppBaseController
     {
         $user = Auth::user();
 
-        $posts = $this->postRepository->all();
+        $posts = $this->postRepository->all()->order_by('created_at');
 
         if ($user->mail = 'admin@criatura.com') {
 
@@ -91,6 +91,7 @@ class PostController extends AppBaseController
         if ($validator->fails()) {
             return ($validator->messages()->first());
         }
+
         $image = $request->asset;
 
         $image_uploaded_path = $image->store('uploads','public');
@@ -103,6 +104,7 @@ class PostController extends AppBaseController
 
         $input['asset'] = $uploadedImageResponse['image_url'];
 
+        $input['order'] = 21;
         $post = $this->postRepository->create($input);
 
         Flash::success('Post saved successfully.');
@@ -210,7 +212,9 @@ class PostController extends AppBaseController
      */
     public function feedPosts(Request $request)
     {
-        $posts = $this->postRepository->orderBy('order','asc')->all();
+        
+        // $posts = $this->postRepository->orderBy('order','asc')->all();
+        $posts = $this->postRepository->orderBy('created_at','desc')->all();
         $tracks = $this->trackRepository->all();
 
 // TODO Associar tracks a posts

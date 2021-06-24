@@ -14,7 +14,7 @@ class AddOrderToPostsTable extends Migration
     public function up()
     {
         Schema::table('posts', function (Blueprint $table) {
-            $table->integer('order');
+            $table->integer('order')->nullable();;
             $table->integer('track_id')->unsigned()->nullable();
             $table->foreign('track_id')->references('id')->on('track');
             $table->integer('album_id')->unsigned()->nullable();
